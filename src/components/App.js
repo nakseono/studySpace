@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import VideoPlayer from './VideoPlayer';
 import VideoList from './VideoList';
+import { searchYouTube } from '../searchYouTube';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,11 +20,11 @@ class App extends React.Component {
 
   getYouTubeVideos(query) {
     var options = {
-      key: this.props.API_KEY,
+      key: YOUTUBE_API_KEY,
       query: query
     };
 
-    this.props.searchYouTube(options, (videos) =>
+    searchYouTube(options, videos =>
       this.setState({
         videos: videos,
         currentVideo: videos[0]
@@ -42,21 +43,23 @@ class App extends React.Component {
       <div>
         <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)} />
         <div className="col-md-7">
-          <VideoPlayer video={this.state.currentVideo}/>
+          <VideoPlayer video={this.state.currentVideo} />
         </div>
         <div className="col-md-7">
           {/*
-          * It's very important to bind the context of this callback.
-          * Also acceptable is to pass a anonymous functoin expression with a fat
-          * arrow that inherits the surrounding lexical `this` context:
-          *
-          *   handleVideoListEntryTitleClick={(video) => this.onVideoListEntryClick(video)}
-          *                                  - or -
-          *   handleVideoListEntryTitleClick={(currentVideo) => this.setState({currentVideo})}
-          *
-          */}
+           * It's very important to bind the context of this callback.
+           * Also acceptable is to pass a anonymous functoin expression with a fat
+           * arrow that inherits the surrounding lexical `this` context:
+           *
+           *   handleVideoListEntryTitleClick={(video) => this.onVideoListEntryClick(video)}
+           *                                  - or -
+           *   handleVideoListEntryTitleClick={(currentVideo) => this.setState({currentVideo})}
+           *
+           */}
           <VideoList
-            handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
+            handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(
+              this
+            )}
             videos={this.state.videos}
           />
         </div>
