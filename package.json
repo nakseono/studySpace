@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "webpack --mode production",
-    "test": "jest src/components/__test__/index.test.js"
+    "test": "jest src/components/__test__/index.test.js",
+    "submit": "node .travis/submit.js"
   },
   "keywords": [],
   "author": "",
