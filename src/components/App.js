@@ -1,8 +1,8 @@
-import React from 'react';
-import Nav from './Nav';
-import VideoPlayer from './VideoPlayer';
-import VideoList from './VideoList';
-import { searchYouTube } from '../searchYouTube';
+import React from "react";
+import Nav from "./Nav";
+import VideoPlayer from "./VideoPlayer";
+import VideoList from "./VideoList";
+import { searchYouTube } from "../searchYouTube";
 
 class App extends React.Component {
   constructor(props) {
@@ -15,12 +15,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
+    this.getYouTubeVideos("react tutorials");
   }
 
   getYouTubeVideos(query) {
     var options = {
-      key: YOUTUBE_API_KEY,
+      key: "YOUTUBE_API_KEY",
       query: query
     };
 
