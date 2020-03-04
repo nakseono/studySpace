@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import VideoPlayer from "./VideoPlayer";
 import VideoList from "./VideoList";
 import { searchYouTube } from "../searchYouTube";
+import { YOUTUBE_API_KEY } from "../../config/youtube";
 
 class App extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class App extends React.Component {
 
   getYouTubeVideos(query) {
     var options = {
-      key: "YOUTUBE_API_KEY",
+      key: YOUTUBE_API_KEY,
       query: query
     };
 
