@@ -21,7 +21,7 @@ body {
 
 .search-bar .form-control {
   border-radius: 2px;
-  width: 80%
+  width: 80%;
 }
 .search-bar .btn {
   border-radius: 2px;
@@ -34,14 +34,14 @@ body {
 .search-bar .btn:hover {
   border-color: #c6c6c6;
   background: #f0f0f0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .video-player-details {
   background: #fff;
   padding: 8px;
   border: 0;
-  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   margin-top: 10px;
 }
 
@@ -49,7 +49,7 @@ body {
   background: #fff;
   padding: 8px;
   border: 0;
-  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
 }
 
@@ -70,4 +70,45 @@ body {
 .video-list-entry-detail {
   font-size: 12px;
   color: #999;
+}
+
+.mdl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  visibility: hidden;
+}
+
+.mdl.show {
+  visibility: visible;
+}
+
+.mdl-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mdl .sidebar {
+  position: absolute;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 350px;
+  transform: translateX(350px);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.mdl.show .sidebar {
+  transform: translateX(0);
 }
