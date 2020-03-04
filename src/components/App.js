@@ -16,12 +16,13 @@ class App extends React.Component {
       isSettingOpen: false,
       currentUser: {
         name: "김코딩"
-      }
+      },
+      darkMode: false
     };
   }
 
   componentDidMount() {
-    // this.getYouTubeVideos("코드스테이츠");
+    this.getYouTubeVideos("코드스테이츠");
   }
 
   getYouTubeVideos(query) {
@@ -50,16 +51,26 @@ class App extends React.Component {
     }));
   }
 
+  handleUpdateSetting(key, value) {
+    const pair = {};
+    pair[key] = value;
+    this.setState(pair);
+  }
+
   render() {
     return (
-      <div>
+      <div className={this.state.darkMode ? "main dark" : "main light"}>
         <Nav
           handleSearchInputChange={this.getYouTubeVideos.bind(this)}
           handleSettingButtonClick={this.handleSettingButtonClick.bind(this)}
           user={this.state.currentUser}
+          darkMode={this.state.darkMode}
         />
         <div className="col-md-7">
-          <VideoPlayer video={this.state.currentVideo} />
+          <VideoPlayer
+            video={this.state.currentVideo}
+            darkMode={this.state.darkMode}
+          />
         </div>
         <div className="col-md-7">
           <VideoList
@@ -68,11 +79,13 @@ class App extends React.Component {
             )}
             videos={this.state.videos}
             user={this.state.currentUser}
+            darkMode={this.state.darkMode}
           />
         </div>
         <Setting
           isOpen={this.state.isSettingOpen}
           handleClose={this.handleSettingButtonClick.bind(this)}
+          handleUpdateSetting={this.handleUpdateSetting.bind(this)}
           user={this.state.currentUser}
         ></Setting>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoPlayer = ({ video }) =>
+const VideoPlayer = ({ video, darkMode }) =>
   !video ? (
     <div className="video-player">Please wait...</div>
   ) : (
@@ -12,7 +12,11 @@ const VideoPlayer = ({ video }) =>
           allowFullScreen
         ></iframe>
       </div>
-      <div className="video-player-details">
+      <div
+        className={
+          darkMode ? "video-player-details dark" : "video-player-details"
+        }
+      >
         <h3>{video.snippet.title}</h3>
         <div>{video.snippet.description}</div>
       </div>
