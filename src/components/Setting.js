@@ -5,7 +5,7 @@ class Setting extends React.Component {
     super(props);
 
     this.state = {
-      username: props.user.name
+      username: props.user ? props.user.name : ""
     };
   }
 
