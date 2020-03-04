@@ -4,7 +4,7 @@ import VideoListEntry from "./VideoListEntry";
 const VideoList = ({
   videos,
   handleVideoListEntryTitleClick,
-  user,
+  user = { name: "Guest" },
   darkMode
 }) => (
   <div className={darkMode ? "video-list dark" : "video-list"}>
