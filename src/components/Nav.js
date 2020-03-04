@@ -9,7 +9,10 @@ const Nav = ({
 }) => (
   <nav className={darkMode ? "navbar dark" : "navbar"}>
     <div className="col-md-6 col-md-offset-3">
-      <Search handleSearchInputChange={handleSearchInputChange} />
+      <Search
+        handleSearchInputChange={handleSearchInputChange}
+        darkMode={darkMode}
+      />
     </div>
 
     <span>{user.name}님이 로그인했습니다.</span>

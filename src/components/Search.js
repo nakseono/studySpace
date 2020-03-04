@@ -30,7 +30,7 @@ class Search extends React.Component {
           onChange={this.handleInputChange.bind(this)}
         />
         <button
-          className="btn hidden-sm-down"
+          className={this.props.darkMode ? "btn btn-dark" : "btn btn-light"}
           onClick={this.handleSearch.bind(this)}
         >
           <span className="glyphicon glyphicon-search"></span>
