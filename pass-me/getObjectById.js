@@ -72,8 +72,17 @@ let TREE_DATA = {
 };
 
 function getObjectById(json, id) {
-  // your code here
+  for(let i = 0; i < json.length; i++){
+    for(let key in json[i]){
+      if(json[i][key] === id){
+        return json[i]
+      } else { if(Array.isArray(json[i][key])){
+        return getObjectById(json[i][key], id)
+      }}
+    }
+  } 
 }
+
 
 module.exports = {
   getObjectById,

@@ -42,9 +42,25 @@ global.printRole = function(user) {
 };
 
 function transformAsHTML(array) {
-  let container = document.querySelector("#container");
+  for(let i = 0; i < array.length; i++) {
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    let div = document.createElement('div');
 
-  // your code here
+    document.getElementById('container').appendChild(li);
+    li.appendChild(a);
+    li.appendChild(div);
+    a.className = 'name';
+    a.textContent = array[i].firstName + ' ' + array[i].lastName;
+    div.className = 'age';
+    div.textContent = array[i].age;
+  }
+  
+  for(let i = 0; i < array.length; i++) {
+    document.getElementsByClassName('name')[i].onclick = function() {
+      printRole(array[i]);
+    }
+  }
 }
 
 module.exports = transformAsHTML;
