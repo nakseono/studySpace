@@ -22,17 +22,23 @@ fn(); // 5
 */
 
 function makeFib() {
-  let count = 0;
-  function sum(n) {
-    if (n < 2) {
-      return n;
+  let n = -1;
+  const arr = [0, 1]; //  0 , 1,  1 ,
+
+  function fibonacci() {
+    n++;
+    if (n === 0) {
+      return 0;
     }
-    return sum(n - 2) + sum(n - 1);
+    if (n === 1) {
+      return 1;
+    }
+    if (n > 1) { // n = 2
+      arr.push(arr[n - 2] + arr[n - 1]);
+    }
+    return arr[n];
   }
-  return function () {
-    count++;
-    return sum(count - 1);
-  };
+  return fibonacci;
 }
 
 module.exports = makeFib;

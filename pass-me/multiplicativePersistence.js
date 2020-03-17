@@ -14,20 +14,16 @@ multiplicativePersistence 함수는 양수를 파라미터로 받는 함수로,
 */
 
 function multiplicativePersistence(num) {
-  let resultArr = [];
-  let resultNum;
+  const str = num.toString();
+  const arr = str.split('');
 
-  resultArr = num.toString().split('');
-  let arrLeng = resultArr.length;
-
-  while (arrLeng > 1) {
-    resultNum = resultArr.reduce((a, b) => a * b);
-
-    resultArr = resultNum.toString().split('');
-    arrLeng = resultArr.length;
+  if (arr.length === 1) {
+    return num;
   }
-
-  return resultNum;
+  if (arr.length > 1) {
+    const result = arr.reduce((acc, val) => acc * val);
+    return multiplicativePersistence(result);
+  }
 }
 
 module.exports = multiplicativePersistence;

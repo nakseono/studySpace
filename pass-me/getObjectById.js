@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable consistent-return */
 /*
 "getObjectById" 메소드를 작성합니다.
 
@@ -73,12 +75,12 @@ const TREE_DATA = {
 
 function getObjectById(json, id) {
   for (let i = 0; i < json.length; i++) {
-    for (const key in json[i]) {
-      if (json[i][key] === id) {
-        return json[i];
-      } if (Array.isArray(json[i][key])) {
-        return getObjectById(json[i][key], id);
-      }
+    if (json[i].id === id) {
+      return json[i];
+    }
+    // 자식이 있는 경우
+    if (json[i].children) {
+      return getObjectById(json[i].children, id);
     }
   }
 }

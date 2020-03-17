@@ -12,8 +12,7 @@ console.log(output); // --> {ask: 1, a: 2, bunch: 2, get: 1}
 */
 
 function countWords(input) {
-  let str = [];
-  str = input.split(' ');
+  const str = input.split(' ');
 
   const obj = {};
 
@@ -26,7 +25,6 @@ function countWords(input) {
     }
     obj[str[i]]++;
   }
-  return obj;
 }
 
 module.exports = countWords;

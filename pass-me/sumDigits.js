@@ -12,18 +12,20 @@ console.log(output2); // --> 4
 */
 
 function sumDigits(num) {
-  let sum = 0;
-  const stringNumArr = num.toString().split('');
+  let pre = 0;
+  const result = num.toString().split('');
 
-  for (let i = 0; i < stringNumArr.length; i++) {
-    if (stringNumArr[0] === '-' && i === 1) {
-      sum -= Number(stringNumArr[1]);
-    } else if (stringNumArr[i] !== '-') {
-      sum += Number(stringNumArr[i]);
+  if (result[0] === '-') {
+    for (let i = 2; i < result.length; i++) {
+      pre = Number(result[i]) + pre;
     }
+    return pre - Number(result[1]);
   }
 
-  return sum;
+  for (let i = 0; i < result.length; i++) {
+    pre += Number(result[i]);
+  }
+  return pre;
 }
 
 module.exports = sumDigits;
