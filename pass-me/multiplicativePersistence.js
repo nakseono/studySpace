@@ -18,18 +18,16 @@ function multiplicativePersistence(num) {
   let resultNum;
 
   resultArr = num.toString().split('');
-  var arrLeng = resultArr.length;
+  let arrLeng = resultArr.length;
 
-  while(arrLeng > 1){
-    resultNum = resultArr.reduce((a, b) => {
-        return a * b;
-    });
+  while (arrLeng > 1) {
+    resultNum = resultArr.reduce((a, b) => a * b);
 
     resultArr = resultNum.toString().split('');
     arrLeng = resultArr.length;
-}
+  }
 
-return resultNum;
+  return resultNum;
 }
 
 module.exports = multiplicativePersistence;

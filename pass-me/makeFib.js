@@ -24,16 +24,15 @@ fn(); // 5
 function makeFib() {
   let count = 0;
   function sum(n) {
-    if(n < 2) {
+    if (n < 2) {
       return n;
-    } else {
-      return sum(n - 2) + sum(n - 1);
     }
+    return sum(n - 2) + sum(n - 1);
   }
-  return function() {
+  return function () {
     count++;
     return sum(count - 1);
-  }
+  };
 }
 
 module.exports = makeFib;

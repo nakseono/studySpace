@@ -13,16 +13,16 @@ console.log(output2); // --> 4
 
 function sumDigits(num) {
   let sum = 0;
-  let stringNumArr = num.toString().split('');
+  const stringNumArr = num.toString().split('');
 
   for (let i = 0; i < stringNumArr.length; i++) {
     if (stringNumArr[0] === '-' && i === 1) {
-      sum = sum - Number(stringNumArr[1]);
+      sum -= Number(stringNumArr[1]);
     } else if (stringNumArr[i] !== '-') {
-      sum = sum + Number(stringNumArr[i]);
+      sum += Number(stringNumArr[i]);
     }
   }
-  
+
   return sum;
 }
 

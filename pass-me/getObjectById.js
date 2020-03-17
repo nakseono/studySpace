@@ -9,82 +9,82 @@ let output = getObjectById(TREE_DATA.items, '1'));
 console.log(output); // --> { "id": "1", "name": "johnny" }
 */
 
-let TREE_DATA = {
+const TREE_DATA = {
   items: [
     {
-      id: "1",
-      name: "johnny"
+      id: '1',
+      name: 'johnny',
     },
     {
-      id: "2",
-      name: "ingi",
+      id: '2',
+      name: 'ingi',
       children: [
         {
-          id: "3",
-          name: "johnson"
+          id: '3',
+          name: 'johnson',
         },
         {
-          id: "4",
-          name: "katy"
+          id: '4',
+          name: 'katy',
         },
         {
-          id: "5",
-          name: "steve",
+          id: '5',
+          name: 'steve',
           children: [
             {
-              id: "6",
-              name: "lisa"
+              id: '6',
+              name: 'lisa',
             },
             {
-              id: "7",
-              name: "penny",
+              id: '7',
+              name: 'penny',
               children: [
                 {
-                  id: "8",
-                  name: "john"
+                  id: '8',
+                  name: 'john',
                 },
                 {
-                  id: "9",
-                  name: "hoyong"
-                }
-              ]
+                  id: '9',
+                  name: 'hoyong',
+                },
+              ],
             },
             {
-              id: "10"
-            }
-          ]
+              id: '10',
+            },
+          ],
         },
         {
-          id: "11"
+          id: '11',
         },
         {
-          id: "12"
-        }
-      ]
+          id: '12',
+        },
+      ],
     },
     {
-      id: "13"
+      id: '13',
     },
     {
-      id: "14"
-    }
-  ]
+      id: '14',
+    },
+  ],
 };
 
 function getObjectById(json, id) {
-  for(let i = 0; i < json.length; i++){
-    for(let key in json[i]){
-      if(json[i][key] === id){
-        return json[i]
-      } else { if(Array.isArray(json[i][key])){
-        return getObjectById(json[i][key], id)
-      }}
+  for (let i = 0; i < json.length; i++) {
+    for (const key in json[i]) {
+      if (json[i][key] === id) {
+        return json[i];
+      } if (Array.isArray(json[i][key])) {
+        return getObjectById(json[i][key], id);
+      }
     }
-  } 
+  }
 }
 
 
 module.exports = {
   getObjectById,
-  TREE_DATA
+  TREE_DATA,
 };

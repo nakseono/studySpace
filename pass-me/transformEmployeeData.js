@@ -23,16 +23,16 @@
 */
 
 function transformEmployeeData(array) {
-  let answer =  array.map((a) => {
-    var output = [];
+  const answer = array.map((a) => {
+    let output = [];
     output = a.reduce((acc, cur) => {
       acc[cur[0]] = cur[1];
       return acc;
     }, {});
     return output;
-  })
+  });
 
-return answer
+  return answer;
 }
 
 module.exports = transformEmployeeData;
