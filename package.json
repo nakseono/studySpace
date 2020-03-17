@@ -19,5 +19,7 @@
   ],
   "author": "codesatates",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
 }
