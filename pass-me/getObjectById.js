@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable consistent-return */
 /*
 "getObjectById" 메소드를 작성합니다.
 
@@ -9,73 +11,82 @@ let output = getObjectById(TREE_DATA.items, '1'));
 console.log(output); // --> { "id": "1", "name": "johnny" }
 */
 
-let TREE_DATA = {
+const TREE_DATA = {
   items: [
     {
-      id: "1",
-      name: "johnny"
+      id: '1',
+      name: 'johnny',
     },
     {
-      id: "2",
-      name: "ingi",
+      id: '2',
+      name: 'ingi',
       children: [
         {
-          id: "3",
-          name: "johnson"
+          id: '3',
+          name: 'johnson',
         },
         {
-          id: "4",
-          name: "katy"
+          id: '4',
+          name: 'katy',
         },
         {
-          id: "5",
-          name: "steve",
+          id: '5',
+          name: 'steve',
           children: [
             {
-              id: "6",
-              name: "lisa"
+              id: '6',
+              name: 'lisa',
             },
             {
-              id: "7",
-              name: "penny",
+              id: '7',
+              name: 'penny',
               children: [
                 {
-                  id: "8",
-                  name: "john"
+                  id: '8',
+                  name: 'john',
                 },
                 {
-                  id: "9",
-                  name: "hoyong"
-                }
-              ]
+                  id: '9',
+                  name: 'hoyong',
+                },
+              ],
             },
             {
-              id: "10"
-            }
-          ]
+              id: '10',
+            },
+          ],
         },
         {
-          id: "11"
+          id: '11',
         },
         {
-          id: "12"
-        }
-      ]
+          id: '12',
+        },
+      ],
     },
     {
-      id: "13"
+      id: '13',
     },
     {
-      id: "14"
-    }
-  ]
+      id: '14',
+    },
+  ],
 };
 
 function getObjectById(json, id) {
-  // your code here
+  for (let i = 0; i < json.length; i++) {
+    if (json[i].id === id) {
+      return json[i];
+    }
+    // 자식이 있는 경우
+    if (json[i].children) {
+      return getObjectById(json[i].children, id);
+    }
+  }
 }
+
 
 module.exports = {
   getObjectById,
-  TREE_DATA
+  TREE_DATA,
 };
