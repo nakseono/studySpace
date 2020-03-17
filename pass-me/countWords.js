@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable consistent-return */
 /*
 "countWords" 함수를 작성합니다.
 
@@ -25,6 +27,7 @@ function countWords(input) {
     }
     obj[str[i]]++;
   }
+  return obj;
 }
 
 module.exports = countWords;
