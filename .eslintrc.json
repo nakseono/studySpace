@@ -5,5 +5,5 @@
     "es6": true,
     "jest": true
   },
-  "rules": {}
+  "rules": {"no-plusplus":0}
 }
