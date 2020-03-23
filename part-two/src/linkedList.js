@@ -10,8 +10,8 @@ const LinkedList = function() {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      this.tail = newNode;
       this.tail.next = newNode;
+      this.tail = newNode;
     }
     return newNode;
   };
