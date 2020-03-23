@@ -1,4 +1,4 @@
-const Tree = function(value) {
+const Tree = function (value) {
   const newTree = {};
   newTree.value = value;
 
@@ -10,9 +10,9 @@ const Tree = function(value) {
 
 const treeMethods = {};
 
-treeMethods.addChild = function(value) {};
+treeMethods.addChild = function (value) {};
 
-treeMethods.contains = function(target) {};
+treeMethods.contains = function (target) {};
 
 /*
  * Complexity: What is the time complexity of the above functions?

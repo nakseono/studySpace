@@ -1,4 +1,4 @@
-const BinarySearchTree = function(value) {};
+const BinarySearchTree = function (value) {};
 
 /*
  * Complexity: What is the time complexity of the above functions?

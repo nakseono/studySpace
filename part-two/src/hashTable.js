@@ -1,21 +1,21 @@
 const { LimitedArray, getIndexBelowMaxForKey } = require('./hashTableHelpers');
 
-const HashTable = function() {
+const HashTable = function () {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
 };
 
-HashTable.prototype.insert = function(k, v) {
+HashTable.prototype.insert = function (k, v) {
   const index = getIndexBelowMaxForKey(k, this._limit);
   this._storage.set(index, v);
 };
 
-HashTable.prototype.retrieve = function(k) {
+HashTable.prototype.retrieve = function (k) {
   const index = getIndexBelowMaxForKey(k, this._limit);
   return this._storage.get(index);
 };
 
-HashTable.prototype.remove = function(k) {
+HashTable.prototype.remove = function (k) {
   const index = getIndexBelowMaxForKey(k, this._limit);
   this._storage.each((prop, i, storage) => {
     if (i === index) {

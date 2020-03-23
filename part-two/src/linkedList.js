@@ -1,10 +1,10 @@
-const LinkedList = function() {
+const LinkedList = function () {
   const list = {};
   list.head = null;
   list.tail = null;
 
-  list.addToTail = function(value) {
-    let newNode = new Node(value);
+  list.addToTail = function (value) {
+    const newNode = new Node(value);
 
     if (this.head === null) {
       this.head = newNode;
@@ -16,10 +16,10 @@ const LinkedList = function() {
     return newNode;
   };
 
-  list.removeHead = function() {
-    var newHead = this.head.next;
+  list.removeHead = function () {
+    const newHead = this.head.next;
 
-    var removeValue = this.head;
+    const removeValue = this.head;
     removeValue.next = null;
 
     this.head = newHead;
@@ -27,15 +27,14 @@ const LinkedList = function() {
     return removeValue.value;
   };
 
-  list.contains = function(target) {
-    var current = this.head;
+  list.contains = function (target) {
+    let current = this.head;
 
     while (current) {
       if (current.value === target) {
         return true;
-      } else {
-        current = current.next;
       }
+      current = current.next;
     }
     return false;
   };
@@ -43,7 +42,7 @@ const LinkedList = function() {
   return list;
 };
 
-const Node = function(value) {
+const Node = function (value) {
   this.value = value;
   this.next = null;
 };
