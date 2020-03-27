@@ -20,17 +20,17 @@ function Dancer (top, left, timeBetweenSteps) {
   this.setPosition(top, left);
 }
 
-Dancer.prototype.createDancerElement = () => {
+Dancer.prototype.createDancerElement = function(){
   let elDancer = document.createElement('span');
     elDancer.className = 'dancer';
     return elDancer;
 }
 
-Dancer.prototype.step = () => {
+Dancer.prototype.step = function(){
   setTimeout(this.step, this.timeBetweenSteps);
 }
 
-Dancer.prototype.setPosition = (top, left) =>{
+Dancer.prototype.setPosition = function(top, left){
   Object.assign(this.$node.style, {
       top: `${top}px`,
       left: `${left}px`

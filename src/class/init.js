@@ -10,6 +10,14 @@ function handleClickDancerButton () {
   // make a dancer with a random position
   //
   // TODO:
+  let dancer = new BlinkyDancerClass(
+    document.body.clientHeight * Math.random(),
+    document.body.clientWidth * Math.random(),
+    Math.random() * 1000
+  );
+  dancer.step();
+  dancer.setPosition();
+  document.body.appendChild(dancer.$node);
 }
 
 window.addEventListener('DOMContentLoaded', () => {

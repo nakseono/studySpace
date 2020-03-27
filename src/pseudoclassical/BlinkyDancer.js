@@ -11,7 +11,7 @@ function BlinkyDancer () {
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
-BlinkyDancer.prototype.step = () => {
+BlinkyDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
   
   let style = this.$node.style;

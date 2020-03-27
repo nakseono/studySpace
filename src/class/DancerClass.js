@@ -12,6 +12,8 @@ class DancerClass {
     this.top = top;
     this.left = left;
     this.$node = this.createDancerElement();
+    this.step();
+    this.setPosition(this.top, this.left);
   }
 
   createDancerElement() {
