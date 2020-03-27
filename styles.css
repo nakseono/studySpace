@@ -8,6 +8,12 @@ body {
    background-image: url(file:///Users/nakseo/Desktop/Study/CodeStates/Immersive%20Course/im-sprint-subclass-dance-party/src/Apple/tree.jpg);
    background-size: 100% 100%;
 }
+
+.tree {
+   width: 200px;
+   height: 200px;
+}
+
 body,
 a:link,
 a:visited,
@@ -28,6 +34,5 @@ a:active {
 }
 .dancer {
    border-radius: 10px;
-   position: absolute;
-   background-image: url(file:///Users/nakseo/Desktop/Study/CodeStates/Immersive%20Course/im-sprint-subclass-dance-party/src/Apple/apple.jpg);
+   position: relative;
 }

@@ -12,8 +12,7 @@ function handleClickDancerButton() {
   // TODO:
   let dancer = new BlinkyDancerClass(
     document.body.clientHeight * Math.random(),
-    document.body.clientWidth * Math.random(),
-    Math.random() * 500);
+    document.body.clientWidth * Math.random());
 
   dancers.push(dancer);
   // dancer.step();
@@ -23,7 +22,7 @@ function handleClickDancerButton() {
 
 function lineUpFunc() {
   dancers.forEach((element) => {
-    element.lineup(200)
+    element.lineup(660)
   })
 }
 
@@ -32,7 +31,7 @@ let topBar = document.querySelector('.topbar');
 
 let makeLineUpButton = document.createElement('a');
 makeLineUpButton.classList.add('lineUpBtn');
-makeLineUpButton.textContent = 'line up'
+makeLineUpButton.textContent = 'Drop Apple'
 topBar.appendChild(makeLineUpButton);
 
 window.addEventListener('DOMContentLoaded', () => {

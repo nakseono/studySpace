@@ -13,7 +13,7 @@ class BlinkyDancerClass extends DancerClass {
     super.step();
 
     let style = this.$node.style;
-    style.display = 'inline-block' // style.display === 'none' ? 'inline-block' : 'none';
+    style.display = 'inline' // style.display === 'none' ? 'inline-block' : 'none';
   }
 }
 
