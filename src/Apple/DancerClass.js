@@ -44,6 +44,7 @@ class DancerClass {
       left: `${left}px`
     });
   }
+
   lineup(top) {
     Object.assign(this.$node.style, {
       top: `${top}px`

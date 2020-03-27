@@ -22,7 +22,7 @@ function handleClickDancerButton() {
 
 function lineUpFunc() {
   dancers.forEach((element) => {
-    element.lineup(660)
+    element.lineup(600)
   })
 }
 
