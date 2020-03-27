@@ -25,7 +25,9 @@
       "lib/underscore/underscore.js"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "jest": "^25.2.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codestates/im10-2019-01-subclass-dance-party.git"

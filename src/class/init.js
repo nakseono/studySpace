@@ -1,11 +1,11 @@
 /* eslint-disable */
 const dancers = [];
 
-function handleClickDancerButton () {
+function handleClickDancerButton() {
   /* makeBlinkyDancer is the dancer maker functions available in global scope.
-  * A new object of the given type will be created and added
-  * to the stage.
-  */
+   * A new object of the given type will be created and added
+   * to the stage.
+   */
 
   // make a dancer with a random position
   //
@@ -13,14 +13,31 @@ function handleClickDancerButton () {
   let dancer = new BlinkyDancerClass(
     document.body.clientHeight * Math.random(),
     document.body.clientWidth * Math.random(),
-    Math.random() * 1000
-  );
-  dancer.step();
-  dancer.setPosition();
+    Math.random() * 1000);
+
+  dancers.push(dancer);
+  // dancer.step();
+  // dancer.setPosition();
   document.body.appendChild(dancer.$node);
 }
+
+function lineUpFunc() {
+  dancers.forEach((element) => {
+    element.lineup(200)
+  })
+}
+
+let topBar = document.querySelector('.topbar');
+
+let makeLineUpButton = document.createElement('a');
+makeLineUpButton.classList.add('lineUpBtn');
+makeLineUpButton.textContent = 'line up'
+topBar.appendChild(makeLineUpButton);
 
 window.addEventListener('DOMContentLoaded', () => {
   const elAddDancerButton = document.querySelector('.addDancerButton');
   elAddDancerButton.addEventListener('click', handleClickDancerButton);
+
+  const lineUp = document.querySelector('.lineUpBtn');
+  lineUp.addEventListener('click', lineUpFunc);
 });
