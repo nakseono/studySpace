@@ -24,6 +24,10 @@ class DancerClass {
   createDancerElement() {
     let elDancer = document.createElement('span');
     elDancer.className = 'dancer';
+    let img = document.createElement('img');
+    img.src = 'file:///Users/nakseo/Desktop/Study/CodeStates/Immersive%20Course/im-sprint-subclass-dance-party/src/Apple/apple.jpg';
+    img.style = 'width: 70px; height: 70px';
+    elDancer.appendChild(img);
     elDancer.onclick = () => {
       elDancer.style.visibility = 'hidden'
     }

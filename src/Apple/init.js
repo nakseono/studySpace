@@ -13,7 +13,7 @@ function handleClickDancerButton() {
   let dancer = new BlinkyDancerClass(
     document.body.clientHeight * Math.random(),
     document.body.clientWidth * Math.random(),
-    Math.random() * 1000);
+    Math.random() * 500);
 
   dancers.push(dancer);
   // dancer.step();
