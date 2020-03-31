@@ -153,7 +153,7 @@
     hasRowConflictAt: function(rowIndex) {
       let row = this.rows();
       let count = 0;
-      let result = false;
+      let result = false; 
 
       for(let i = 0; i < row.length; i++){
         if(row[rowIndex][i] === 1){
@@ -187,11 +187,17 @@
     hasColConflictAt: function(colIndex) {
       // conIndex = arr[index]
       // this.get('n') -> n개의 array를 알수있음.
+      // [   0 1 2 3
+      //  0 [0,0,0,0],
+      //  1 [0,0,0,0],
+      //  2 [0,0,0,0],
+      //  3 [0,0,0,0]
+      // ]
       let result = false;
       let count = 0;
-      
+
       for(let i = 0; i < this.get('n'); i++){
-        if( === 1){
+        if(this.get(i)[colIndex] === 1){
           count++
         }
       }
@@ -203,20 +209,58 @@
 
     // 체스 판 위에 열 충돌이 하나라도 있는지 검사합니다.
     hasAnyColConflicts: function() {
-      return false; // fixme
+      let result = false;
+
+      for(let i = 0; i < this.get('n'); i++){
+        if(this.hasColConflictAt(i) === true){
+          result = true;
+        }
+      }
+      return result;// fixme
     },
 
     // Major Diagonals - go from top-left to bottom-right
     // --------------------------------------------------------------
     //
     // 주어진 주대각선에 충돌하는 말이 있는지 확인합니다.
+    
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
-      return false; // fixme
+      const size = this.get("n");
+      let count = 0;
+      let rowIdx = 0;
+      let colIdx = majorDiagonalColumnIndexAtFirstRow;
+      for (; rowIdx < size && colIdx < size; rowIdx++, colIdx++) {
+        if (colIdx >= 0) {
+          const row = this.get(rowIdx);
+          count += row[colIdx];
+        }
+      }
+      return count > 1;
+      
+      /* let result = false;
+      for(let r = 0; r < this.rows(); r++){
+        for(let c = majorDiagonalColumnIndexAtFirstRow; c < this.rows(); c++){
+          if(majorDiagonalColumnIndexAtFirstRow = (r - c)){
+            if(this.get(r)[c] === 1){
+              result = true;
+            }
+          }
+        }
+      }
+      return result; // fixme */
     },
 
     // 체스 판 위에 주대각선 충돌이 하나라도 있는지 검사합니다.
     hasAnyMajorDiagonalConflicts: function() {
-      return false; // fixme
+      return false;
+      /* let result = false;
+
+      for(let i = 0; i < this.get('n'); i++){
+        if(this.hasColConflictAt(i) === true){
+          result = true;
+        }
+      }
+      return result; // fixme */
     },
 
     // Minor Diagonals - go from top-right to bottom-left
@@ -224,7 +268,18 @@
     //
     // 주어진 반대각선에 충돌하는 말이 있는지 확인합니다.
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
-      return false; // fixme
+      const size = this.get("n");
+      let count = 0;
+      let rowIdx = 0;
+      let colIdx = minorDiagonalColumnIndexAtFirstRow;
+
+      for (; rowIdx < size && colIdx < size; rowIdx++, colIdx--) {
+        if (colIdx >= 0) {
+          const row = this.get(rowIdx);
+          count += row[colIdx];
+        }
+      }
+      return count > 1;
     },
 
     // 체스 판 위에 반대각선 충돌이 하나라도 있는지 검사합니다.
