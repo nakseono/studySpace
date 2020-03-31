@@ -151,12 +151,33 @@
     //
     // 주어진 행(rowIndex)에 충돌하는 말이 있는지 확인합니다.
     hasRowConflictAt: function(rowIndex) {
-      return false; // fixme
+      let row = this.rows();
+      let count = 0;
+      let result = false;
+
+      for(let i = 0; i < row.length; i++){
+        if(row[rowIndex][i] === 1){
+          count++;
+        }
+      }
+      
+      if(count > 1) {
+        result = true;
+      }
+      return result; // fixme
     },
 
     // 체스 판 위에 행 충돌이 하나라도 있는지 검사합니다.
     hasAnyRowConflicts: function() {
-      return false; // fixme
+      let result = false;
+
+      for(let i = 0; i < this.get('n'); i++){
+        if(this.hasRowConflictAt(i) === true){
+          result = true;
+        }
+      }
+
+      return result;
     },
 
     // COLUMNS - run from top to bottom
@@ -164,7 +185,20 @@
     //
     // 주어진 열(colIndex)에 충돌하는 말이 있는지 확인합니다.
     hasColConflictAt: function(colIndex) {
-      return false; // fixme
+      // conIndex = arr[index]
+      // this.get('n') -> n개의 array를 알수있음.
+      let result = false;
+      let count = 0;
+      
+      for(let i = 0; i < this.get('n'); i++){
+        if( === 1){
+          count++
+        }
+      }
+      if(count > 1){
+        result = true;
+      }
+      return result; // fixme
     },
 
     // 체스 판 위에 열 충돌이 하나라도 있는지 검사합니다.
