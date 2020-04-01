@@ -10,7 +10,12 @@ var sport = {
     { name: 'Kevin Durant', age: 28 }
   ],
   playerNames: function () {
-    // YOUR CODE HERE
+    let result = [];
+    let player = this.players;
+    for(let i = 0; i < player.length; i++){
+      result.push(player[i]["name"] + ' plays ' + this.name);
+    }
+    return result;
   }
 };
 

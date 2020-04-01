@@ -16,10 +16,10 @@ exports.TimeComplexity = TimeComplexity;
 // Problem 1: Sum the squares of the values in a given array.
 
 /*
- * Complexity:
+ * Complexity: 배열의 index 하나하나를 전부 접근해서 제곱해야 하므로 N개의 복잡도. O(n) LINEAR
  */
 
-exports.sumSquaresTimeComplexity = TimeComplexity.FIX_ME; // TODO: Update this constant
+exports.sumSquaresTimeComplexity = TimeComplexity.LINEAR; // TODO: Update this constant
 
 var sumSquares = function(array) {
   return array.reduce(function(memo, val) {
@@ -31,10 +31,10 @@ var sumSquares = function(array) {
 // Problem 2: Calculate the n-th power of given number.
 
 /*
- * Complexity:
+ * Complexity: exponent의 크기가 커지더라도 홀수에서 -1, 짝수에서 /2 되며 그 계산범위가 줄어든다. =>  O(log(n)) LOGARITHMIC
  */
 /*START SOLUTION*///O(lg(exponent))/*END SOLUTION*/
-exports.nthPowerTimeComplexity = TimeComplexity.FIX_ME; // TODO: Update this constant
+exports.nthPowerTimeComplexity = TimeComplexity.LOGARITHMIC; // TODO: Update this constant
 
 var nthPower = function(base, exponent) {
   // Base case:
@@ -53,10 +53,10 @@ var nthPower = function(base, exponent) {
 // Problem 3: Generate every sequence of throws for an n-round rock-paper-scissors game.
 
 /*
- * Complexity:
+ * Complexity: 가위바위보의 rounds 가 진행될 수록 경우의 수는 *기하급수적*으로 증가한다. => 3^n EXPONENTIAL
  */
 /*START SOLUTION*///O(3^n)/*END SOLUTION*/
-exports.rockPaperScissorsTimeComplexity = TimeComplexity.FIX_ME; // TODO: Update this constant
+exports.rockPaperScissorsTimeComplexity = TimeComplexity.EXPONENTIAL; // TODO: Update this constant
 
 var rockPaperScissors = function(rounds) {
   var sequences = [];
