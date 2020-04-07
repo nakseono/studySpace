@@ -3,57 +3,66 @@ const app = {
   server: "http://52.78.206.149:3000/messages",
 
   init: () => {
-    app.fetch();
+    app.fetch().then((res) => {
+      for(let i = 0; i < res.length; i++){
+        app.renderMessage(res[i]);
+      }
+    })
   },
 
   fetch: () => {
-    fetch(app.sever)
-      .then((res) => res.json())
-      .then((res) => {
-        for (let i = 0; i < res.length; i++) {
-          this.renderMessage(res[i]);
-        }
-      });
+    return fetch(app.sever) 
+    // .then((res) => res.json())
+     .then((res) => {
+        return res;
+      }); 
   },
 
   send: (message) => {
-    fetch(app.server, {
-      method: "POST",
+    window.fetch((app.server), {
+      method: 'POST',
       body: JSON.stringify(message),
       headers: {
-        "Content-Type": "application/json",
-      },
-    }).then((res) => res.json());
+        "Content-Type": "application/json"
+      }
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      // eslint-disable-next-line no-console
+      console.log(json);
+    })
   },
 
   clearMessages: () => {
-    document.querySelector("#list").textContent = "";
+    document.querySelector('#chats').innerHTML = '';
+    //list.innerHTML = "";
   },
 
   renderMessage: (message) => {
-    // eslint-disable-next-line no-undef
-    let chatTem = document.importNode(template.content, true);
-    let chats = document.querySelector("#chats");
-    chats.querySelector(".id").textContent = message.id;
-    chats.querySelector(".name").textContent = message.username;
-    chats.querySelector(".text").textContent = message.text;
-    chats.querySelector(".roomname").textContent = message.roomname;
+    // https://github.com/codestates/help-desk/issues/1332
+    let newElement = document.createElement('div');
+    let newUsername = document.createElement('div');
+    let newText = document.createElement('div');
+    newElement.className = 'chat';
+    newUsername.className = 'username';
+    newText.className = 'userText';
 
-    chatTem.appendChild(chats);
-  },
+    newUsername.textContent = message.username;
+    newText.textContent = message.text;
+    newElement.appendChild(newUsername);
+    newElement.appendChild(newText);
+    document.querySelector('#chats').prepend(newElement);
+
+    /* let chat = document.importNode(template.content, true);
+      chat.querySelector('.name').textContent = message.username;
+      chat.querySelector('.text').textContent = message.text;
+
+    list.appendChild(chat);
+    */
+  }
 };
-function sendTo() {
-  let newUser = document.querySelector("#inputId").value;
-  let newCommment = document.querySelector("#inputText").value;
-  // let newRoomname =
 
-  let message = {
-    username: newUser.value,
-    text: newCommment.value,
-  };
 
-  app.send(message);
-}
-
-let commentBtn = document.querySelector("#inputBtn");
-commentBtn.addEventListener("click", sendTo());
+app.init();
