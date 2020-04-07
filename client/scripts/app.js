@@ -32,14 +32,14 @@ const app = {
 
   renderMessage: (message) => {
     // eslint-disable-next-line no-undef
-    let chats = document.importNode(template.content, true);
+    let chatTem = document.importNode(template.content, true);
+    let chats = document.querySelector("#chats");
     chats.querySelector(".id").textContent = message.id;
     chats.querySelector(".name").textContent = message.username;
     chats.querySelector(".text").textContent = message.text;
     chats.querySelector(".roomname").textContent = message.roomname;
-    chats.querySelector(".date").textContent = message.date;
 
-    document.querySelector("#list").appendChild(chats);
+    chatTem.appendChild(chats);
   },
 };
 function sendTo() {

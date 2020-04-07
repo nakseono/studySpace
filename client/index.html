@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8" />
-      <title>chatterbox</title>
-      <link rel="stylesheet" href="styles/styles.css" />
-   </head>
-   <body>
-      <div id="main">
-         <h1>chatterbox</h1>
+  <head>
+    <meta charset="utf-8" />
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>chatterbox</h1>
+    </div>
+    <!-- #chats 엘리먼트의 id는 바꾸지 마세요 -->
+    <div id="input">
+      <input type="text" id="inputId" />
+      <input type="text" id="inputText" />
+      <button id="inputBtn">Post</button>
+    </div>
+
+    <template id="chatTem">
+      <div id="chats">
+        <span class="id"></span>
+        <span class="name"></span>
+        <span class="text"></span>
+        <span class="roomname"></span>
+        <span class="date"></span>
       </div>
-      <!-- #chats 엘리먼트의 id는 바꾸지 마세요 -->
-      <div id="input">
-         <input type="text" id="inputId" value="ID" />
-         <input type="text" id="inputText" value="Write Text !" />
-         <button id="inputBtn">Post</button>
-      </div>
+    </template>
 
-      <template id="chatTem">
-         <div id="chats">
-            <span class="name"></span>
-            <span class="text"></span>
-         </div>
-      </template>
+    <div id="list"></div>
 
-      <div id="list"></div>
-
-      <script src="scripts/app.js"></script>
-   </body>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>
