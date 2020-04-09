@@ -38,24 +38,25 @@ const requestHandler = function(request, response) {
   console.log()
   let body = [];
  
-  if(request.method === 'OPTIONS') {
+  if(request.method === 'OPTIONS' && request.url === '/classes/messages' || request.url === '/') {
     response.writeHead(statusCode, headers);
     response.end();
   }
   
-  if(request.method === 'GET') {
+  if(request.method === 'GET' && request.url === '/classes/messages' || request.url === '/') {
     response.writeHead(200, headers);
     response.end(JSON.stringify(data));
     
-  }else if (request.method === 'POST') {
+  }else if (request.method === 'POST' && request.url === '/classes/messages' || request.url === '/') {
     request.on('data', (chunk) => {
     body.push(chunk);
   }).on('end', () => {
     body = Buffer.concat(body).toString();
     body = JSON.parse(body);
-    body['id'] = data.length;
-    data.push(body)
-
+    body['id'] = data.results.length;
+    data.results.push(body)
+    response.writeHead(201, headers);
+    response.end(JSON.stringify(data));
     
   })
 }else {
