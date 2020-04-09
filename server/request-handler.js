@@ -32,6 +32,21 @@ const requestHandler = function(request, response) {
   // 응답 헤더에 응답하는 컨텐츠의 자료 타입을 헤더에 기록 합니다.
   headers["Content-Type"] = "text/plain";
 
+  let body = [];
+  if(request.method === 'OPTIONS') {
+    response.writeHead(statusCode, headers);
+    response.end();
+    }
+  
+  if(request.method === 'GET') {
+    response.end(JSON.stringify(body));
+  }else if (request.method === 'POST') {
+    request.on('data', (chunk) => {
+    body.push(chunk);
+  }).on('end', () => {
+    body = Buffer.concat(body).toString();
+  })
+}
   // .writeHead() 메소드는 응답 헤더에 해당 key, value 를 적어줍니다.
   response.writeHead(statusCode, headers);
 

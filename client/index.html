@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>chatterbox</h1>
+      <span>Room :</span> 
+      <select id="room" style="width: 100px;">
+        <option>모두보기</option>
+      </select>
+
+        <div> 
+          <form>
+          <input id="user" type = 'text'>
+          <input id="newchat" type = 'text'> 
+          <button id="submit" type="button">submit</button> 
+          </form>
+        </div>
+
+    </div>
+        <!-- #chats 엘리먼트의 id는 바꾸지 마세요 -->
+    <div id="chats">
+    </div>
+
+
+    <template id = "temp">  
+      <div class="chat">
+        <div class="username"></div>
+        <div class="message"></div>
+      </div>
+    </template>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
