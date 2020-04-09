@@ -74,6 +74,7 @@ room.onclick = () =>
   fetch(app.server)
   .then(res => res.json())
   .then(data => {
+    console.log(data)
     app.clearMessages();
       for(let i = data.length-1; i > -1; i = i-1) {
         if(room.value === data[i].roomname || room.value === '모두보기') {
@@ -122,4 +123,4 @@ function loop () {
   })
 }
 app.init();
-setInterval(loop, 500);
+// setInterval(loop, 500);
