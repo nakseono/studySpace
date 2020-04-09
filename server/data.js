@@ -1,3 +1,3 @@
-const data = [{id : 0, username : 'sad', text : 'asd', roomname : 'oo'}];
+const data = [];
 
 module.exports = data;

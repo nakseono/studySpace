@@ -9,7 +9,6 @@ requestHandler 함수를 export 하여 basic-server.js 에서 사용 할 수 있
 **************************************************************/
 
 const data = require('./data')
-const fs = require('fs');
 // eslint-disable-next-line no-unused-vars
 const requestHandler = function(request, response) {
   // node server 의 requestHandler는 항상 request, response를 인자로 받습니다.
@@ -35,8 +34,8 @@ const requestHandler = function(request, response) {
   const headers = defaultCorsHeaders;
   // 응답 헤더에 응답하는 컨텐츠의 자료 타입을 헤더에 기록 합니다.
   headers["Content-Type"] = "text/plain; charset=utf-8";
-  console.log(headers)
-
+  // eslint-disable-next-line no-console
+  console.log()
   let body = [];
  
   if(request.method === 'OPTIONS') {
@@ -45,14 +44,23 @@ const requestHandler = function(request, response) {
   }
   
   if(request.method === 'GET') {
+    response.writeHead(200, headers);
     response.end(JSON.stringify(data));
+    
   }else if (request.method === 'POST') {
     request.on('data', (chunk) => {
     body.push(chunk);
   }).on('end', () => {
     body = Buffer.concat(body).toString();
+    body = JSON.parse(body);
+    body['id'] = data.length;
     data.push(body)
+
+    
   })
+}else {
+  response.writeHead(404, headers); 
+  response.end('aaa');
 }
   // .writeHead() 메소드는 응답 헤더에 해당 key, value 를 적어줍니다.
   

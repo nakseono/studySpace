@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 const app = {
-  server: "http://localhost:3000/"
+  server: "http://localhost:3000"
 };
 
 app.fetch = () => {
@@ -74,6 +74,7 @@ room.onclick = () =>
   fetch(app.server)
   .then(res => res.json())
   .then(data => {
+    // eslint-disable-next-line no-console
     console.log(data)
     app.clearMessages();
       for(let i = data.length-1; i > -1; i = i-1) {
