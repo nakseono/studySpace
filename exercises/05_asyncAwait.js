@@ -36,7 +36,19 @@ const writeFilePromise = util.promisify(fs.writeFile);
 
 const BASE_URL = "https://koreanjson.com/users/";
 
-const fetchUsersAndWriteToFileAsync = async (readFilePath, writeFilePath) => {};
+const fetchUsersAndWriteToFileAsync = async (readFilePath, writeFilePath) => {
+  return new Promise(async (resolve, reject) => {
+    let getData = await getDataFromFilePromise(readFilePath);
+    let result = await Promise.all(
+      getData.map(async (id) => {
+        let getRequest = await getBodyFromGetRequestPromise(BASE_URL + id);
+        return getRequest.name;
+      })
+    );
+    await writeFilePromise(writeFilePath, result.join('\n') + '\n', 'utf8');
+    resolve();
+  });
+};
 
 module.exports = {
   fetchUsersAndWriteToFileAsync
