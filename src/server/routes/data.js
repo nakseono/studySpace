@@ -12,16 +12,44 @@ const { JSDOM } = jsdom;
 router.get("/:line", async (req, res) => {
   const filename = `./data/${req.params.line}.txt`;
   res.set("Content-Type", "application/json");
-
   // TODO : Help function을 이용하여, 주어진 filename의 내용을 읽을 수 있도록 구현하세요.
   /*
    * fs.existsSync 를 이용하여, 존재하지 않는 파일에 대해서 에러 핸들링을 할 수 있어야 합니다.
    */
+  if(fs.existsSync(filename)){
+    fileHelper.readFile(filename)
+        .then(text => {
+          let result = {
+            id : req.params.line,
+            body : text,
+            status : null
+          }
+          res.status(200).json(result)
+        })
+        .catch(err => res.send('error'+ err))
+  }else{
+    let result = {
+      id : req.params.line,
+      status : 'none'
+    }
+    res.status(200).json(result)
+  }
 });
 
 // POST /data/{lineNo}
 router.post("/:line", async (req, res) => {
   const lineNo = req.params.line;
+  const filename = `./data/${lineNo}.txt`;
+  const url = await fileHelper.readLineFromSourceList(lineNo)
+  const content = await fetchHelper.retrieveArticle(url)
+  const document = new JSDOM(content)
+  const articleContent = document.window.document.querySelector('article').textContent
+
+    await fileHelper.writeFile(filename , articleContent)
+
+  res.send('ok')
+
+
 
   // TODO : Help function을 이용하여, 주어진 filename에 내용을 저장할 수 있도록 구현하세요.
   /*
