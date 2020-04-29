@@ -7,6 +7,7 @@ async function writeFile(filename, body) {
       if(err){
         reject(err)
       }else{
+        console.log(body)
         resolve(body)
       }
     })

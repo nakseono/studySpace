@@ -14,8 +14,8 @@ router.get("/", async (req, res) => {
 
 // POST /source
 router.post("/", async (req, res) => {
-  // TODO: Help function을 이용하여, source.txt의 내용으로 저장할 수 있도록 구현하세요.
-    fileHelper.writeSourceListFile(req.body)
+  // TODO: Help function을 이용하여, source.txt의 내   용으로 저장할 수 있도록 구현하세요.
+  await fileHelper.writeSourceListFile(req.body)
     res.send()
 
 });

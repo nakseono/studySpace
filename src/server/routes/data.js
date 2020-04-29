@@ -19,35 +19,30 @@ router.get("/:line", async (req, res) => {
   if(fs.existsSync(filename)){
     fileHelper.readFile(filename)
         .then(text => {
-          let result = {
-            id : req.params.line,
-            body : text,
-            status : null
-          }
-          res.status(200).json(result)
+          res.status(200).send({id: req.params.line, body: text})
         })
         .catch(err => res.send('error'+ err))
   }else{
     let result = {
       id : req.params.line,
-      status : 'none'
+      status : 'nonexist'
     }
-    res.status(200).json(result)
+    res.send(result)
   }
+
 });
 
 // POST /data/{lineNo}
 router.post("/:line", async (req, res) => {
-  const lineNo = req.params.line;
-  const filename = `./data/${lineNo}.txt`;
-  const url = await fileHelper.readLineFromSourceList(lineNo)
-  const content = await fetchHelper.retrieveArticle(url)
-  const document = new JSDOM(content)
-  const articleContent = document.window.document.querySelector('article').textContent
+    const lineNo = req.params.line;
+    const filename = `./data/${lineNo}.txt`;
+    const url = await fileHelper.readLineFromSourceList(lineNo)
+    const content = await fetchHelper.retrieveArticle(url)
+    const document = new JSDOM(content)
+    const articleContent = document.window.document.querySelector('body').textContent
+    await fileHelper.writeFile(filename, articleContent)
 
-    await fileHelper.writeFile(filename , articleContent)
-
-  res.send('ok')
+    res.status(201).send('ok')
 
 
 

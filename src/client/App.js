@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import './app.css';
+import Modal from 'react-modal'
+import ReactHtmlParser from 'react-html-parser';
 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
+Modal.setAppElement('#root')
 export default class App extends Component {
   state = {
     nowEditing: false,
@@ -9,7 +23,8 @@ export default class App extends Component {
       id: null,
       body: null,
       status: null
-    }
+    },
+    modalIsOpen : false
   };
 
   componentDidMount() {
@@ -21,7 +36,7 @@ export default class App extends Component {
   }
 
   handleClickSaveSource() {
-    this.toggleMode();
+    // this.toggleMode();
     fetch('/api/source',
       {
         method: 'POST',
@@ -79,6 +94,12 @@ export default class App extends Component {
       }
     });
   }
+  openModal() {
+    this.setState({modalIsOpen : true})
+  }
+  closeModal() {
+    this.setState({modalIsOpen : false})
+  }
 
   toggleMode() {
     this.setState(prevState => ({ nowEditing: !prevState.nowEditing }));
@@ -100,12 +121,12 @@ export default class App extends Component {
         <h3>article collector (for medium blog)</h3>
         <div className={this.state.nowEditing ? 'hidden' : ''}>
           <header>
-            <button onClick={this.toggleMode.bind(this)}>편집</button>
+            <button onClick={this.openModal.bind(this)}>입력</button>
           </header>
           <ul>
             {lis}
           </ul>
-          <code id="content" className={this.state.currentItem.status === 'nonexist' ? 'hidden' : ''}>{this.state.currentItem.body}</code>
+          {ReactHtmlParser(`<code id="content" className=${this.state.currentItem.status === 'nonexist' ? 'hidden' : ''}>${this.state.currentItem.body}</code>`)}
           <div id="modal" className={this.state.currentItem.status === 'nonexist' ? '' : 'hidden'}>
             <div className="modal-content">
               <p>아직 수집되지 않았습니다. 수집 후 파일로 저장하시겠습니까?</p>
@@ -120,23 +141,12 @@ export default class App extends Component {
           </div>
         </div>
 
-        <div className={this.state.nowEditing ? '' : 'hidden'}>
-          <header>
+          <Modal isOpen={this.state.modalIsOpen} style = {customStyles}>
+            <h2>dfdfdfd</h2>
+            <button onClick={this.closeModal.bind(this)}>close</button>
             <button onClick={this.handleClickSaveSource.bind(this)}>저장</button>
-          </header>
-          <div>
-            <p>
-              내용을 가져올
-              <a href="https://medium.com/" target="_blank">Medium</a>
-              post URL을 한줄씩 입력하세요.
-            </p>
-            <p>
-              예:
-              <code>https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4</code>
-            </p>
-          </div>
           <textarea value={sources} onChange={this.handleChangeValue.bind(this)} />
-        </div>
+          </Modal>
       </div>
     );
   }
