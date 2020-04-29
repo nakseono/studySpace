@@ -39,8 +39,13 @@ router.post("/:line", async (req, res) => {
     const url = await fileHelper.readLineFromSourceList(lineNo)
     const content = await fetchHelper.retrieveArticle(url)
     const document = new JSDOM(content)
-    const articleContent = document.window.document.querySelector('body').textContent
-    await fileHelper.writeFile(filename, articleContent)
+    const articleContent = document.window.document.querySelector(".sc-kgAjT gXJKuQ sc-gGBfsJ kVIKkh").innerHTML
+    var artDucument = JSDOM.jsdom(articleContent, null, {
+      features: {
+        querySelector: true
+      }
+    })
+    await fileHelper.writeFile(filename, artDucument)
 
     res.status(201).send('ok')
 
