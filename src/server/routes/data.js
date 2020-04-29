@@ -34,22 +34,34 @@ router.get("/:line", async (req, res) => {
 
 // POST /data/{lineNo}
 router.post("/:line", async (req, res) => {
-    const lineNo = req.params.line;
+    try {
+      const lineNo = req.params.line;
     const filename = `./data/${lineNo}.txt`;
     const url = await fileHelper.readLineFromSourceList(lineNo)
     const content = await fetchHelper.retrieveArticle(url)
     const document = new JSDOM(content)
-    const articleContent = document.window.document.querySelector(".sc-kgAjT gXJKuQ sc-gGBfsJ kVIKkh").innerHTML
-    var artDucument = JSDOM.jsdom(articleContent, null, {
-      features: {
-        querySelector: true
-      }
-    })
-    await fileHelper.writeFile(filename, artDucument)
+    const testUrl = url.split(".")
+    let articleContent;
+
+    switch(testUrl[0]){
+      case 'https://velog':
+        articleContent = document.window.document.querySelector(".sc-feJyhm").innerHTML
+        break;
+      case 'https://medium':
+        articleContent = document.window.document.querySelector("article").innerHTML
+        break;
+      // case 'https://blog':
+      //   articleContent = document.window.document.querySelector("div").innerHTML
+      // break; 네이버는 실패했다..
+      default: break;
+    }
+    await fileHelper.writeFile(filename, articleContent)
+  } catch(err){
+    // eslint-disable-next-line no-console
+    console.log("ERR!")
+  }
 
     res.status(201).send('ok')
-
-
 
   // TODO : Help function을 이용하여, 주어진 filename에 내용을 저장할 수 있도록 구현하세요.
   /*

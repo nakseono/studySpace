@@ -7,6 +7,7 @@ async function writeFile(filename, body) {
       if(err){
         reject(err)
       }else{
+        // eslint-disable-next-line no-console
         console.log(body)
         resolve(body)
       }
