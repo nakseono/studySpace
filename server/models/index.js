@@ -22,31 +22,16 @@ module.exports = {
       // SELECT user가 존재하는지 찾기 없으면 1. -> 2. 실행. 있으면 2. 실행
 
       db.query(
-        `SELECT id FROM users WHERE username='${body.username}'`,
-        function (err, results) {
-          if (results.length === 0) {
-            // 값이 없을 때
-            db.query(
-              `INSERT INTO users (username) VALUES ("${body.username}")`,
-              function (error, results) {
-                if (error) throw error;
+        `INSERT INTO users (username) VALUES ("${body.username}")`,
+        function (error, results) {
+          if (error) throw error;
 
-                db.query(
-                  `INSERT INTO messages (user_id, text, roomname) VALUES ((SELECT id FROM users WHERE username='${body.username}'), ${body.text}, ${body.roomname})`,
-                  function (error, results) {
-                    callback(results);
-                  }
-                );
-              }
-            );
-          } else {
-            db.query(
-              `INSERT INTO messages (user_id, text, roomname) VALUES ((SELECT id FROM users WHERE username='${body.username}'), ${body.text}, ${body.roomname})`,
-              function (error, results) {
-                callback(results);
-              }
-            );
-          }
+          db.query(
+            `INSERT INTO messages (user_id, text, roomname) VALUES ((SELECT id FROM users WHERE username='${body.username}'), '${body.text}', '${body.roomname}')`,
+            function (error, results) {
+              callback(results);
+            }
+          );
         }
       );
     }, // a function which can be used to insert a message into the database
