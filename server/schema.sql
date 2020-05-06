@@ -12,7 +12,7 @@ CREATE TABLE `messages` (
 
 CREATE TABLE `users` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `username` varchar(255) UNIQUE,
+  `username` varchar(255) UNIQUE
 );
 
 ALTER TABLE `messages` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);

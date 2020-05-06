@@ -5,22 +5,18 @@ var db = require('../db');
 module.exports = {
   messages: {
     get: function (callback) {
-      db.query('SELECT * FROM messages', function (error, results) {
-        if (error) throw error;
-        console.log('The solution is: ', results);
-        callback(results);
+      db.query(`SELECT users.username, messages.text, messages.date, messages.roomname 
+                FROM messages 
+                INNER JOIN users 
+                ON messages.user_id = users.id`
+                , (err, result) => {
+                  if(err) throw err;
+                  console.log('데이터값');
+                  console.log(result);
+                  callback(result);
       });
-
-      // results에서 담긴 user_id로 쿼리를 한 번 더 보내서 users 테이블에서 username 가져와서 데이터를 조합한다.
-      // callback(그 데이터);
     }, // a function which produces all the messages
     post: function (body, callback) {
-      //       INSERT INTO user (name)
-      //       VALUES ('John Smith');
-      //  INSERT INTO user_details (id, weight, height)
-      //       VALUES ((SELECT id FROM user WHERE name='John Smith'), 83, 185);
-      // SELECT user가 존재하는지 찾기 없으면 1. -> 2. 실행. 있으면 2. 실행
-
       db.query(
         `INSERT INTO users (username) VALUES ("${body.username}")`,
         function (error, results) {
