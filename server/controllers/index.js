@@ -22,14 +22,17 @@ module.exports = {
   users: {
     get: function (req, res) {
       console.log('getUsers');
-
-      res.status(200).send(models.users.get());
+      models.users.get((data) => {
+        console.log(data);
+        res.status(200).send(data);
+      });
     }, // a function which handles a get request for all users
     post: function (req, res) {
       console.log('postUsers');
-
-      models.users.post(req.body);
-      res.status(200).send();
+      models.users.post(req.body, (data) => {
+        console.log(data);
+        res.status(200).send(data);
+      });
     }, // a function which handles posting a user to the database
   },
 };

@@ -78,8 +78,8 @@ describe("Sprint-database", () => {
 
     it("Should output all messages from the DB", function(done) {
       // Let's insert a message into the db
-      var queryString = "";
-      var queryArgs = [];
+      var queryString = "INSERT INTO messages (username, text, roomname, date) VALUES (?, ?, ?, now())";
+      var queryArgs = ["abc", "Men like you can never change!", "main"];
       // TODO - The exact query string and query args to use
       // here depend on the schema you design, so I'll leave
       // them up to you. */
@@ -96,6 +96,8 @@ describe("Sprint-database", () => {
           response,
           body
         ) {
+          // eslint-disable-next-line no-console
+          console.log(body);
           var messageLog = JSON.parse(body);
           expect(messageLog[0].text).to.equal("Men like you can never change!");
           expect(messageLog[0].roomname).to.equal("main");

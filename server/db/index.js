@@ -26,6 +26,7 @@ connection.connect((err) => {
     return;
   }
 
+  console.log(password);
   console.log('connected as id ' + connection.threadId);
 });
 

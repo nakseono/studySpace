@@ -4,7 +4,7 @@ USE chat;
 
 CREATE TABLE `messages` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `user_id` int,
+  `username` varchar(255),
   `text` text,
   `date` datetime DEFAULT NOW(),
   `roomname` varchar(255)
@@ -15,7 +15,7 @@ CREATE TABLE `users` (
   `username` varchar(255) UNIQUE
 );
 
-ALTER TABLE `messages` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+-- ALTER TABLE `messages` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 /*
 CREATE TABLE messages (
