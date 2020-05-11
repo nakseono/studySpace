@@ -20,4 +20,4 @@
   - [x] should return user data with request of session.userid
   - [x] should return Unauthorized if request without session.userid
         POST /user/signout
-  - [ ] should redirect {BASE_URL}/ to signout
+  - [x] should redirect {BASE_URL}/ to signout
