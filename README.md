@@ -11,8 +11,8 @@
 - GET
   - [x] should respond with Success message
 - POST /user/signup
-  - [ ] should respond user info to signup data
-  - [ ] should respond conflict with existing user email
+  - [x] should respond user info to signup data
+  - [x] should respond conflict with existing user email
 - POST /user/signin
   - [ ] should respond user id to signin data
   - [ ] should respond NOT FOUND with unvalid user

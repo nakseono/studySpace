@@ -71,7 +71,7 @@ app.use('/links', linksRouter);
 
 app.set('port', port);
 app.listen(app.get('port'), () => {
-  //console.log(`app is listening in PORT ${app.get('port')}`);
+  console.log(`app is listening in PORT ${app.get('port')}`);
 });
 
 module.exports = app;
