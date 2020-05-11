@@ -14,8 +14,8 @@
   - [x] should respond user info to signup data
   - [x] should respond conflict with existing user email
 - POST /user/signin
-  - [ ] should respond user id to signin data
-  - [ ] should respond NOT FOUND with unvalid user
+  - [x] should respond user id to signin data
+  - [x] should respond NOT FOUND with unvalid user
 - GET /user/info
   - [ ] should return user data with request of session.userid
   - [ ] should return Unauthorized if request without session.userid
