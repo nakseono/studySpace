@@ -17,7 +17,7 @@
   - [x] should respond user id to signin data
   - [x] should respond NOT FOUND with unvalid user
 - GET /user/info
-  - [ ] should return user data with request of session.userid
-  - [ ] should return Unauthorized if request without session.userid
+  - [x] should return user data with request of session.userid
+  - [x] should return Unauthorized if request without session.userid
         POST /user/signout
   - [ ] should redirect {BASE_URL}/ to signout
