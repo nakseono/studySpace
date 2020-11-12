@@ -1,7 +1,11 @@
 const colors = require('colors')
 let studentInfo = require('../student.json')
 
+<<<<<<< HEAD
 let {th, name, sprint} = studentInfo
+=======
+let { th, name } = studentInfo
+>>>>>>> project/master
 
 if (typeof th !== "string" || !th.match(/^-{0,1}\d+$/)) {
   throw new Error("student.json 기수에는 숫자만 string 형식으로 입력하세요".red)

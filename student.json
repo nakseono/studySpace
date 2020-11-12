@@ -1,9 +1,15 @@
 {
+<<<<<<< HEAD
   "th": "기수를 숫자만! 입력해주세요! 예)10",
   "name": "수강생분의 이름을 한글로! 적어주세요! 예)존도우",
 <<<<<<< HEAD
   "sprint": "self-assesssment-04"
 =======
   "sprint": "self-assesssments-03"
+>>>>>>> project/master
+=======
+  "th": "기수를 숫자만! string 형식으로 입력해주세요! 예)10",
+  "name": "수강생분의 이름을 한글로! 적어주세요! 예)존도우",
+  "sprint": "self-assesssments-02"
 >>>>>>> project/master
 }

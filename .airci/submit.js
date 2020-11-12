@@ -6,11 +6,15 @@ let studentInfo = require("../student.json");
 let testResult = require("../results.json")
 let { th, name, sprint } = studentInfo;
 <<<<<<< HEAD
+<<<<<<< HEAD
 let { passed, failed } = testResult;
 =======
 let { numPassedTests, numFailedTests } = testResult;
 let passed = numPassedTests;
 let failed = numFailedTests;
+>>>>>>> project/master
+=======
+let { passed, failed } = testResult
 >>>>>>> project/master
 
 console.log(['테스트 결과입니다.', `통과된 테스트: ${passed}`.green, `통과하지 못한 테스트: ${failed}`.red].join('\n'))
@@ -24,6 +28,7 @@ const options = {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const result = new Promise((resolve, reject) => {
   const req = https.request(options, res => {
@@ -38,6 +43,8 @@ const result = new Promise((resolve, reject) => {
     });
 
 =======
+=======
+>>>>>>> project/master
     
 const result = new Promise((resolve, reject) => {
   const req = https.request(options, res => {
@@ -51,11 +58,15 @@ const result = new Promise((resolve, reject) => {
       data += chunk;
     });
     
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
     res.on("end", () => {
       resolve(JSON.parse(data.toString()))
     });
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   req.on("error", e => {
@@ -63,11 +74,16 @@ const result = new Promise((resolve, reject) => {
   });
 
 =======
+=======
+>>>>>>> project/master
     
   req.on("error", e => {
     throw new Error("data did not submit correctly");
   });
     
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
   // send the request
   req.write(
@@ -84,7 +100,11 @@ const result = new Promise((resolve, reject) => {
   req.end();
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> project/master
 =======
     
 >>>>>>> project/master

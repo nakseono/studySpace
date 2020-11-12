@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -92,4 +93,7 @@ yarn-error.log*
 results.json
 
 .vscode
+>>>>>>> project/master
+=======
+node_modules
 >>>>>>> project/master

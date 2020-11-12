@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "self-assessments-week-04",
   "version": "1.0.0",
   "description": "## Guidelines",
@@ -22,10 +23,21 @@
     "eject": "react-scripts eject",
     "test": "cross-env CI=true react-scripts test --json --outputFile=results.json",
 >>>>>>> project/master
+=======
+  "name": "self-assessments-week-02",
+  "version": "1.0.0",
+  "description": "code states self assessments",
+  "main": "index.js",
+  "scripts": {
+    "run-test": "mocha __test__/test.js",
+    "report-test": "mocha __test__/test.js --reporter reporter.js --exit",
+    "test": "npm-run-all -c -s --silent run-test report-test",
+>>>>>>> project/master
     "pre-test": "node __test__/preTest.js",
     "check": "node .airci/submit.js",
     "submit": "npm-run-all -s --silent pre-test check"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   "keywords": [],
   "author": "",
@@ -51,6 +63,14 @@
     "cross-env": "^5.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "npm-run-all": "^4.1.5"
+>>>>>>> project/master
+=======
+  "author": "codestates",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "colors": "^1.4.0",
+    "mocha": "^6.2.0",
     "npm-run-all": "^4.1.5"
 >>>>>>> project/master
   }
