@@ -6,7 +6,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -18,9 +21,12 @@
 .flooignore
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # editor settings
 .vscode
 
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 # Compiled Dirs (http://nodejs.org/api/addons.html)
@@ -63,6 +69,9 @@ Temporary Items
 ### Node ###
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -77,7 +86,10 @@ yarn-error.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -92,6 +104,9 @@ lib-cov
 *.gz
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -125,7 +140,11 @@ bower_components
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+=======
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+>>>>>>> project/master
 =======
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 >>>>>>> project/master
@@ -144,7 +163,11 @@ jspm_packages/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # TypeScript v1 declaration files
+=======
+# Typescript v1 declaration files
+>>>>>>> project/master
 =======
 # Typescript v1 declaration files
 >>>>>>> project/master
@@ -174,6 +197,7 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,6 +243,8 @@ node_modules
 >>>>>>> project/master
 =======
 >>>>>>> project/master
+=======
+>>>>>>> project/master
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -241,6 +267,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # students data
 __test__/review.json
@@ -273,4 +300,8 @@ review.json
 
 # Prettier
 .prettierrc
+>>>>>>> project/master
+=======
+# Students Data
+review.json
 >>>>>>> project/master

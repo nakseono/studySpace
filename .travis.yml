@@ -3,7 +3,11 @@ node_js:
   - "stable"
 after_script:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - npm run submit
+=======
+  - npm run submit
+>>>>>>> project/master
 =======
   - npm run submit
 >>>>>>> project/master
