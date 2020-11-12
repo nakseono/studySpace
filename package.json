@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "self-assessments-week-04",
   "version": "1.0.0",
   "description": "## Guidelines",
@@ -109,6 +110,35 @@
   },
   "dependencies": {
     "colors": "^1.4.0"
+>>>>>>> project/master
+=======
+  "name": "immersive-prep",
+  "version": "1.0.0",
+  "description": "Repository for preperation immersive course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:example": "jest test-example/",
+    "test:passme": "jest pass-me/",
+    "test:watch": "jest --watch",
+    "lint": "eslint **/*.js --quiet",
+    "submit": "node .travis/submit.js"
+  },
+  "keywords": [
+    "linter",
+    "testing",
+    "recursion",
+    "underbar"
+  ],
+  "author": "codesatates",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.19.0",
+    "jest": "^25.1.0"
 >>>>>>> project/master
   }
 }

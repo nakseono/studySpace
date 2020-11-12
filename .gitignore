@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Floobits
 .floo
@@ -204,4 +205,11 @@ __test__/review.json
 /node_modules
 /client/client-result.json
 /server/server-result.json
+>>>>>>> project/master
+=======
+node_modules
+.circleci/results.json
+.vscode
+.DS_Store
+package-lock.json
 >>>>>>> project/master
