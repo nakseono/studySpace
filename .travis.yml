@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "stable"
+<<<<<<< HEAD
 after_script:
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,4 +39,11 @@ after_script:
 >>>>>>> project/master
 =======
   - npm run submit
+>>>>>>> project/master
+=======
+services:
+  - mysql
+before_script:
+  - mysql -u root --password="" < server/schema.sql
+  - npm start &
 >>>>>>> project/master

@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Immersive Prep
 =======
 # Datastructure
@@ -99,4 +100,7 @@
 >>>>>>> project/master
 =======
 ## Article Collector
+>>>>>>> project/master
+=======
+## Database
 >>>>>>> project/master
