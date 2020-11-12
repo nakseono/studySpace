@@ -15,6 +15,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "self-assessments-week-04",
   "version": "1.0.0",
   "description": "## Guidelines",
@@ -66,10 +67,14 @@
 =======
   "name": "recast.ly",
 >>>>>>> project/master
+=======
+  "name": "immersive-toy-problems",
+>>>>>>> project/master
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "submit": "node .airci/submit.js"
   },
@@ -543,6 +548,20 @@
     "husky": "^1.0.1",
     "lint-staged": "^7.3.0",
     "mocha": "^7.1.2"
+  }
+}
+>>>>>>> project/master
+=======
+    "submit": "node .travis/submit.js",
+    "test": "node .travis/getdailyscript.js | bash"
+  },
+  "author": "codestates",
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.1.0",
+    "mocha": "^6.2.0",
+    "should": "^11.2.1"
   }
 }
 >>>>>>> project/master

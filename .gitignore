@@ -17,6 +17,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> project/master
@@ -641,4 +642,9 @@ review.json
 
 # code editro
 .vscode/
+>>>>>>> project/master
+=======
+node_modules/
+.DS_Store
+package-lock.json
 >>>>>>> project/master
