@@ -2,9 +2,13 @@ const colors = require('colors')
 let studentInfo = require('../student.json')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 let {th, name, sprint} = studentInfo
 =======
 let { th, name } = studentInfo
+>>>>>>> project/master
+=======
+let {th, name, sprint} = studentInfo
 >>>>>>> project/master
 
 if (typeof th !== "string" || !th.match(/^-{0,1}\d+$/)) {

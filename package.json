@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "self-assessments-week-04",
   "version": "1.0.0",
   "description": "## Guidelines",
@@ -33,10 +34,18 @@
     "report-test": "mocha __test__/test.js --reporter reporter.js --exit",
     "test": "npm-run-all -c -s --silent run-test report-test",
 >>>>>>> project/master
+=======
+  "name": "self-assessments-week-01",
+  "version": "1.0.0",
+  "description": "codestates self assessments",
+  "scripts": {
+    "test": "jest --json --outputFile=results.json",
+>>>>>>> project/master
     "pre-test": "node __test__/preTest.js",
     "check": "node .airci/submit.js",
     "submit": "npm-run-all -s --silent pre-test check"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   "keywords": [],
@@ -72,6 +81,16 @@
     "colors": "^1.4.0",
     "mocha": "^6.2.0",
     "npm-run-all": "^4.1.5"
+>>>>>>> project/master
+=======
+  "author": "codestates",
+  "license": "ISC",
+  "devDependencies": {
+    "colors": "^1.3.3",
+    "eslint": "^5.13.0",
+    "jest": "^24.1.0",
+    "npm-run-all": "^4.1.5",
+    "mocha": "^5.2.0"
 >>>>>>> project/master
   }
 }
