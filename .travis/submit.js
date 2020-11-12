@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { exec } = require("child_process");
 const https = require("https");
 const { URCLASS_URL, ASSESSMENT_ID, TRAVIS_PULL_REQUEST_SLUG } = process.env;
@@ -47,6 +48,8 @@ exec("jest --json", (err, json, stderr) => {
       "Content-Type": "application/json"
     }
 =======
+=======
+>>>>>>> project/master
 const { exec } = require('child_process');
 const https = require('https');
 const { URCLASS_URL, ASSESSMENT_ID, TRAVIS_PULL_REQUEST_SLUG } = process.env;
@@ -54,6 +57,7 @@ const { URCLASS_URL, ASSESSMENT_ID, TRAVIS_PULL_REQUEST_SLUG } = process.env;
 if (TRAVIS_PULL_REQUEST_SLUG === '\n') {
   throw new Error('github username is missing');
 }
+<<<<<<< HEAD
 
 exec('jest ./__test__/index.test.js --json', (err, json, stderr) => {
   const result = JSON.parse(json);
@@ -125,6 +129,38 @@ function makeRequest(options, body) {
         }
         throw new Error("There is an error on response from urclass.");
 =======
+=======
+exec(
+  'node ./node_modules/.bin/mocha ./__test__/spec.js --reporter json --exit',
+  (err, json, stderr) => {
+    const result = JSON.parse(json);
+    const username = TRAVIS_PULL_REQUEST_SLUG.split('/')[0];
+
+    const options = {
+      hostname: URCLASS_URL,
+      path: `/production/submit/sprint`,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    console.log(JSON.stringify(options));
+    console.log(result);
+
+    const body = {
+      assessment_id: ASSESSMENT_ID,
+      githubUsername: username,
+      type: 'mocha',
+      result: result,
+    };
+
+    makeRequest(options, body);
+  }
+);
+
+function makeRequest(options, body) {
+>>>>>>> project/master
   const req = https.request(options, (res) => {
     let data;
     res.on('data', (chunk) => {
@@ -137,15 +173,24 @@ function makeRequest(options, body) {
           throw new Error('invalid github username.');
         }
         throw new Error('There is an error on response from urclass.');
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
       }
     });
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   req.on("error", e => {
     console.log(e);
     throw new Error("data did not send to urclass");
+=======
+  req.on('error', (e) => {
+    console.log(e);
+    throw new Error('data did not send to urclass');
+>>>>>>> project/master
 =======
   req.on('error', (e) => {
     console.log(e);

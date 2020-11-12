@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> project/master
 =======
@@ -99,6 +100,17 @@
   },
   "rules": {
     "no-console": "off"
+  }
+}
+>>>>>>> project/master
+=======
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
   }
 }
 >>>>>>> project/master
