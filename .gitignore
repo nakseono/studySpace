@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> project/master
@@ -481,4 +482,7 @@ result.json
 
 
 config/youtube.js
+>>>>>>> project/master
+=======
+node_modules/
 >>>>>>> project/master
