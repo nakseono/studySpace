@@ -3,8 +3,11 @@ const { expect } = require("chai");
 const global = {};
 const path = require("path");
 
+<<<<<<< HEAD
 let page;
 
+=======
+>>>>>>> project/master
 const opts = {
   headless: true,
   slowMo: 100,
@@ -29,7 +32,11 @@ after(async function() {
   global.browser.close();
 });
 
+<<<<<<< HEAD
 describe("n-queens", async function() {
+=======
+describe("chatterbox client", async function() {
+>>>>>>> project/master
   before(async function() {
     var cases = await global.page.evaluate(() => {
       return Array.from(document.querySelectorAll(".test h2")).map(
@@ -56,6 +63,16 @@ describe("n-queens", async function() {
     describe("here are some dynamic It() tests", function() {
       cases.forEach(function(test, i) {
         it(test, function() {
+<<<<<<< HEAD
+=======
+          if (!passed[i]) {
+            /* eslint-disable */
+            console.log("\t" + "-".repeat(Math.min(100, failed[i].length)));
+            console.log("\t" + failed[i]);
+            console.log("\t" + "-".repeat(Math.min(100, failed[i].length)));
+            /* eslint-enable */
+          }
+>>>>>>> project/master
           expect(passed[i]).to.eql(true);
         });
       });

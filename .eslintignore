@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 part-one/__test__
 part-two/__test__
 =======
@@ -26,4 +27,8 @@ part-two/__test__
 /src/BoardView.js
 /src
 test.mocha.js
+>>>>>>> project/master
+=======
+node_modules/
+spec/
 >>>>>>> project/master

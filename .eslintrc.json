@@ -4,12 +4,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
   "extends": "eslint:recommended",
   "env": {
     "es6": true,
     "node": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
     "jest": true,
     "browser": true
@@ -53,5 +57,14 @@
 }
 >>>>>>> project/master
 =======
+}
+>>>>>>> project/master
+=======
+    "mocha": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  }
 }
 >>>>>>> project/master
