@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom";
 import FishTable from "./FishTable";
@@ -31,10 +32,14 @@ ReactDOM.render(
 =======
 import React from 'react';
 import ReactDOM from 'react-dom';
+=======
+import React from "react";
+import ReactDOM from "react-dom";
+>>>>>>> project/master
 
-import App from './components/App';
-import { YOUTUBE_API_KEY } from '../config/youtube';
+import App from "./components/App";
 
+<<<<<<< HEAD
 // const title = 'hello world';
 console.log(App);
 console.log(YOUTUBE_API_KEY);
@@ -43,4 +48,7 @@ ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
+>>>>>>> project/master
+=======
+ReactDOM.render(<App />, document.getElementById("app"));
 >>>>>>> project/master

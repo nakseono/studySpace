@@ -76,6 +76,7 @@
     "build": "webpack --mode production",
     "test": "jest src/components/__test__/index.test.js",
     "submit": "node .travis/submit.js"
+<<<<<<< HEAD
   },
 >>>>>>> project/master
   "keywords": [],
@@ -314,6 +315,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codestates/im-sprint-n-queens.git"
+=======
+>>>>>>> project/master
   },
   "keywords": [],
   "author": "",
@@ -417,8 +420,12 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "node-fetch": "^2.6.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 }
