@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Immersive Prep
 =======
 # Datastructure
@@ -91,4 +92,7 @@
     │        └── package.json
     │
     └.gitignore   # gitignore를 이용해서 node_modules가 repository에 포함되지 않도록 하세요
+>>>>>>> project/master
+=======
+## Promises
 >>>>>>> project/master

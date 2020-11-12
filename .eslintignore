@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 part-one/__test__
 part-two/__test__
 =======
@@ -35,4 +36,7 @@ spec/
 >>>>>>> project/master
 =======
 **/server/spec
+>>>>>>> project/master
+=======
+**/node_modules
 >>>>>>> project/master

@@ -13,7 +13,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -37,6 +40,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # editor settings
 .vscode
 
@@ -52,6 +56,8 @@
 # editor settings
 .vscode
 
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
@@ -70,11 +76,14 @@ dist/
 
 # Icon must end with two \r
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ### OSX ###
 .DS_Store
 .AppleDouble
 .LSOverride
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -85,6 +94,9 @@ Icon
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 # Files that might appear in the root of a volume
@@ -110,6 +122,9 @@ Temporary Items
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -139,6 +154,7 @@ yarn-error.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> project/master
@@ -160,6 +176,8 @@ yarn-error.log*
 >>>>>>> project/master
 =======
 >>>>>>> project/master
+=======
+>>>>>>> project/master
 lib-cov
 *.seed
 *.log
@@ -175,6 +193,9 @@ lib-cov
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -223,6 +244,7 @@ bower_components
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 =======
 # Compiled binary addons (http://nodejs.org/api/addons.html)
@@ -241,6 +263,9 @@ bower_components
 >>>>>>> project/master
 =======
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+>>>>>>> project/master
+=======
+# Compiled binary addons (http://nodejs.org/api/addons.html)
 >>>>>>> project/master
 =======
 # Compiled binary addons (http://nodejs.org/api/addons.html)
@@ -262,6 +287,7 @@ jspm_packages/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # TypeScript v1 declaration files
 =======
 # Typescript v1 declaration files
@@ -280,6 +306,9 @@ jspm_packages/
 >>>>>>> project/master
 =======
 # TypeScript v1 declaration files
+>>>>>>> project/master
+=======
+# Typescript v1 declaration files
 >>>>>>> project/master
 =======
 # Typescript v1 declaration files
@@ -307,6 +336,7 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,6 +395,8 @@ node_modules
 >>>>>>> project/master
 =======
 >>>>>>> project/master
+=======
+>>>>>>> project/master
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -386,6 +418,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -485,4 +518,6 @@ config/youtube.js
 >>>>>>> project/master
 =======
 node_modules/
+>>>>>>> project/master
+=======
 >>>>>>> project/master

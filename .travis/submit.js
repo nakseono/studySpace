@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { exec } = require("child_process");
 const https = require("https");
 const { URCLASS_URL, ASSESSMENT_ID, TRAVIS_PULL_REQUEST_SLUG } = process.env;
@@ -45,6 +46,27 @@ exec("jest --json", (err, json, stderr) => {
     headers: {
       "Content-Type": "application/json"
     }
+=======
+const { exec } = require('child_process');
+const https = require('https');
+const { URCLASS_URL, ASSESSMENT_ID, TRAVIS_PULL_REQUEST_SLUG } = process.env;
+
+if (TRAVIS_PULL_REQUEST_SLUG === '\n') {
+  throw new Error('github username is missing');
+}
+
+exec('jest ./__test__/index.test.js --json', (err, json, stderr) => {
+  const result = JSON.parse(json);
+  const username = TRAVIS_PULL_REQUEST_SLUG.split('/')[0];
+
+  const options = {
+    hostname: URCLASS_URL,
+    path: `/production/submit/sprint`,
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+>>>>>>> project/master
   };
 
   console.log(JSON.stringify(options));
@@ -53,6 +75,7 @@ exec("jest --json", (err, json, stderr) => {
   const body = {
     assessment_id: ASSESSMENT_ID,
     githubUsername: username,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,12 +102,16 @@ exec("jest --json", (err, json, stderr) => {
 =======
 >>>>>>> project/master
     result: result
+=======
+    result: result,
+>>>>>>> project/master
   };
 
   makeRequest(options, body);
 });
 
 function makeRequest(options, body) {
+<<<<<<< HEAD
   const req = https.request(options, res => {
     let data;
     res.on("data", chunk => {
@@ -97,13 +124,33 @@ function makeRequest(options, body) {
           throw new Error("invalid github username.");
         }
         throw new Error("There is an error on response from urclass.");
+=======
+  const req = https.request(options, (res) => {
+    let data;
+    res.on('data', (chunk) => {
+      data += chunk;
+    });
+    res.on('end', () => {
+      console.log('data from urclass is ', data);
+      if (res.statusCode >= 400) {
+        if (res.statusCode === 400) {
+          throw new Error('invalid github username.');
+        }
+        throw new Error('There is an error on response from urclass.');
+>>>>>>> project/master
       }
     });
   });
 
+<<<<<<< HEAD
   req.on("error", e => {
     console.log(e);
     throw new Error("data did not send to urclass");
+=======
+  req.on('error', (e) => {
+    console.log(e);
+    throw new Error('data did not send to urclass');
+>>>>>>> project/master
   });
 
   req.write(JSON.stringify(body));

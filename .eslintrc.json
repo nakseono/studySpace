@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> project/master
 =======
@@ -84,5 +85,20 @@
     "rules": {
         "semi": "off"
     }
+}
+>>>>>>> project/master
+=======
+  "extends": "eslint:recommended",
+  "env" : {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-console": "off"
+  }
 }
 >>>>>>> project/master
