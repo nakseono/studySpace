@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "extends": "eslint:recommended",
   "env": {
     "es6": true,
@@ -15,5 +16,14 @@
     "jest": true
   },
   "rules": {"no-plusplus":0}
+>>>>>>> project/master
+=======
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
 >>>>>>> project/master
 }
