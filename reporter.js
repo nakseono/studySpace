@@ -1,8 +1,12 @@
 const mocha = require('mocha');
 const fs = require('fs')
 <<<<<<< HEAD
+<<<<<<< HEAD
 const colors = require('colors')
 =======
+>>>>>>> project/master
+=======
+const colors = require('colors')
 >>>>>>> project/master
 
 module.exports = MyReporter;
@@ -26,9 +30,16 @@ function MyReporter(runner) {
       failed
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(['테스트 기록 결과입니다.', `기록된 통과 테스트: ${passed}`.green, `기록된 통과하지 못한 테스트: ${failed}`.red].join('\n'))
 =======
 >>>>>>> project/master
     fs.writeFileSync('results.json', JSON.stringify(result));
   });
 }
+=======
+    console.log(['테스트 기록 결과입니다.', `기록된 통과 테스트: ${passed}`.green, `기록된 통과하지 못한 테스트: ${failed}`.red].join('\n'))
+    fs.writeFileSync('results.json', JSON.stringify(result));
+  });
+}
+>>>>>>> project/master

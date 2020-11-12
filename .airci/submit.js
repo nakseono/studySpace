@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> project/master
 const https = require("https");
 const colors = require('colors')
 
@@ -6,6 +9,7 @@ const colors = require('colors')
 let studentInfo = require("../student.json");
 let testResult = require("../results.json")
 let { th, name, sprint } = studentInfo;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +27,9 @@ let { numPassedTests, numFailedTests } = testResult;
 let passed = numPassedTests;
 let failed = numFailedTests;
 >>>>>>> project/master
+=======
+let { passed, failed } = testResult
+>>>>>>> project/master
 
 console.log(['테스트 결과입니다.', `통과된 테스트: ${passed}`.green, `통과하지 못한 테스트: ${failed}`.red].join('\n'))
 
@@ -37,6 +44,7 @@ const options = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const result = new Promise((resolve, reject) => {
   const req = https.request(options, res => {
@@ -51,6 +59,8 @@ const result = new Promise((resolve, reject) => {
     });
 
 =======
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -70,6 +80,9 @@ const result = new Promise((resolve, reject) => {
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -82,12 +95,15 @@ const result = new Promise((resolve, reject) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   req.on("error", e => {
     throw new Error("data did not submit correctly");
   });
 
 =======
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -99,6 +115,9 @@ const result = new Promise((resolve, reject) => {
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -121,7 +140,11 @@ const result = new Promise((resolve, reject) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> project/master
 =======
     
 >>>>>>> project/master
@@ -139,6 +162,7 @@ result.then(result => {
   }
 }).catch(error => {
   console.log('제출이 실패했습니다. 다시 한 번 제출해주세요.'.magenta)
+<<<<<<< HEAD
 <<<<<<< HEAD
 })
 =======
@@ -253,4 +277,7 @@ require('colors');
     );
   }
 })();
+>>>>>>> project/master
+=======
+})
 >>>>>>> project/master

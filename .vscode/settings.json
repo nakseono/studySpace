@@ -2,6 +2,7 @@
   "workbench.colorCustomizations": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "activityBar.background": "#432142",
     "titleBar.activeBackground": "#5E2E5C",
     "titleBar.activeForeground": "#FCF9FC"
@@ -14,6 +15,11 @@
     "activityBar.background": "#3D2442",
     "titleBar.activeBackground": "#56335C",
     "titleBar.activeForeground": "#FBF9FC"
+>>>>>>> project/master
+=======
+    "activityBar.background": "#2F255D",
+    "titleBar.activeBackground": "#423382",
+    "titleBar.activeForeground": "#FBFAFD"
 >>>>>>> project/master
   }
 }
