@@ -1,2 +1,11 @@
+<<<<<<< HEAD
 part-one/__test__
 part-two/__test__
+=======
+.eslint*
+**/node_modules
+**/bower_components
+**/lib
+**/vendor
+**/*.min.js
+>>>>>>> project/master

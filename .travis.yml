@@ -2,4 +2,8 @@ language: node_js
 node_js:
   - "stable"
 after_script:
+<<<<<<< HEAD
   - npm run submit
+=======
+  - npm run submit
+>>>>>>> project/master

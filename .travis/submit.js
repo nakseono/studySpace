@@ -6,7 +6,11 @@ if (TRAVIS_PULL_REQUEST_SLUG === "\n") {
   throw new Error("github username is missing");
 }
 
+<<<<<<< HEAD
 exec("jest --json", (err, json, stderr) => {
+=======
+exec("mocha ./test/**/*.js --reporter json", (err, json, stderr) => {
+>>>>>>> project/master
   const result = JSON.parse(json);
   const username = TRAVIS_PULL_REQUEST_SLUG.split("/")[0];
 
@@ -25,6 +29,10 @@ exec("jest --json", (err, json, stderr) => {
   const body = {
     assessment_id: ASSESSMENT_ID,
     githubUsername: username,
+<<<<<<< HEAD
+=======
+    type: "mocha",
+>>>>>>> project/master
     result: result
   };
 

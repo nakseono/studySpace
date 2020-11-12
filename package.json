@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "self-assessments-week-04",
   "version": "1.0.0",
   "description": "## Guidelines",
@@ -151,6 +152,19 @@
     "test:part-two": "jest part-two/",
     "precommit": "lint-staged",
     "lint": "eslint part-one/src part-two/src --quiet",
+=======
+  "name": "im-sprints-beesbeesbees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.js",
+    "precommit": "lint-staged",
+    "lint": "eslint src/",
+>>>>>>> project/master
     "submit": "node .travis/submit.js"
   },
   "lint-staged": {
@@ -162,6 +176,7 @@
     },
     "ignore": [
       "node_modules/",
+<<<<<<< HEAD
       "**/__test__/*.js"
     ]
   },
@@ -175,6 +190,31 @@
     "jest": "^24.9.0",
     "lint-staged": "^7.2.2",
     "npm-run-all": "^4.1.5",
+    "underscore": "^1.9.1"
+>>>>>>> project/master
+=======
+      "**/test/*.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codestates/im-sprints-beesbeesbees.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codestates/im-sprints-beesbeesbees/issues"
+  },
+  "homepage": "https://github.com/codestates/im-sprints-beesbeesbees#readme",
+  "dependencies": {
+    "jest": "^25.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "mocha": "^5.2.0",
     "underscore": "^1.9.1"
 >>>>>>> project/master
   }

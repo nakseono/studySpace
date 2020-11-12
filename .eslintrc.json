@@ -1,10 +1,14 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> project/master
   "extends": "eslint:recommended",
   "env": {
     "es6": true,
     "node": true,
+<<<<<<< HEAD
     "jest": true,
     "browser": true
   }
@@ -27,3 +31,9 @@
   }
 >>>>>>> project/master
 }
+=======
+    "mocha": true,
+    "browser": true
+  }
+}
+>>>>>>> project/master
