@@ -1,0 +1,23 @@
+{
+  "name": "self-assessments-week-04",
+  "version": "1.0.0",
+  "description": "## Guidelines",
+  "scripts": {
+    "start": "node ./node-req-count/index.js",
+    "test": "mocha ./__test__/test.js --exit",
+    "report-test": "mocha ./__test__/test.js --reporter reporter.js --exit",
+    "pre-test": "node __test__/preTest.js",
+    "check": "node .airci/submit.js",
+    "submit": "npm-run-all -s --silent pre-test check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "colors": "^1.4.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.5",
+    "request": "^2.88.0"
+  }
+}
