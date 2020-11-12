@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Floobits
 .floo
@@ -196,4 +197,11 @@ __test__/review.json
 
 # prettier
 .prettierrc
+>>>>>>> project/master
+=======
+/client/node_modules
+/server/node_modules
+/node_modules
+/client/client-result.json
+/server/server-result.json
 >>>>>>> project/master
