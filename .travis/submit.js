@@ -10,6 +10,7 @@ if (TRAVIS_PULL_REQUEST_SLUG === "\n") {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 exec("jest --json", (err, json, stderr) => {
 =======
 exec("mocha ./test/**/*.js --reporter json", (err, json, stderr) => {
@@ -22,6 +23,9 @@ exec("mocha ./__test__/test.mocha.js --reporter json", (err, json, stderr) => {
 >>>>>>> project/master
 =======
 exec("mocha __test__/test.mocha.js --reporter json", (err, json, stderr) => {
+>>>>>>> project/master
+=======
+exec("jest --json", (err, json, stderr) => {
 >>>>>>> project/master
   const result = JSON.parse(json);
   const username = TRAVIS_PULL_REQUEST_SLUG.split("/")[0];
@@ -45,6 +49,7 @@ exec("mocha __test__/test.mocha.js --reporter json", (err, json, stderr) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     type: "mocha",
 >>>>>>> project/master
@@ -56,6 +61,8 @@ exec("mocha __test__/test.mocha.js --reporter json", (err, json, stderr) => {
 >>>>>>> project/master
 =======
     type: "mocha",
+>>>>>>> project/master
+=======
 >>>>>>> project/master
     result: result
   };

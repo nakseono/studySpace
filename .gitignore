@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> project/master
@@ -58,11 +59,18 @@ dist/
 .LSOverride
 
 # Icon must end with two \r
+=======
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+>>>>>>> project/master
 Icon
 
 # Thumbnails
 ._*
 
+<<<<<<< HEAD
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
@@ -122,6 +130,14 @@ yarn-error.log*
 >>>>>>> project/master
 =======
 >>>>>>> project/master
+=======
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+### Node ###
+>>>>>>> project/master
 lib-cov
 *.seed
 *.log
@@ -130,6 +146,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -396,4 +413,26 @@ results.json
 
 # vscode
 .vscode
+>>>>>>> project/master
+=======
+
+pids
+logs
+results
+
+
+### NPM ###
+npm-debug.log
+node_modules
+
+
+### Bower ###
+**/bower_components/
+
+
+### PhPStorm ###
+.idea/
+
+## ignore test result json file
+result.json
 >>>>>>> project/master
