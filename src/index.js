@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom";
 import FishTable from "./FishTable";
@@ -27,3 +28,19 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
+=======
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from './components/App';
+import { YOUTUBE_API_KEY } from '../config/youtube';
+
+// const title = 'hello world';
+console.log(App);
+console.log(YOUTUBE_API_KEY);
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
+>>>>>>> project/master

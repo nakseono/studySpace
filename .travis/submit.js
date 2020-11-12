@@ -11,6 +11,7 @@ if (TRAVIS_PULL_REQUEST_SLUG === "\n") {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 exec("jest --json", (err, json, stderr) => {
 =======
 exec("mocha ./test/**/*.js --reporter json", (err, json, stderr) => {
@@ -23,6 +24,9 @@ exec("mocha ./__test__/test.mocha.js --reporter json", (err, json, stderr) => {
 >>>>>>> project/master
 =======
 exec("mocha __test__/test.mocha.js --reporter json", (err, json, stderr) => {
+>>>>>>> project/master
+=======
+exec("jest --json", (err, json, stderr) => {
 >>>>>>> project/master
 =======
 exec("jest --json", (err, json, stderr) => {
@@ -50,6 +54,7 @@ exec("jest --json", (err, json, stderr) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     type: "mocha",
 >>>>>>> project/master
@@ -61,6 +66,8 @@ exec("jest --json", (err, json, stderr) => {
 >>>>>>> project/master
 =======
     type: "mocha",
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
