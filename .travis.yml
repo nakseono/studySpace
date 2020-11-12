@@ -1,5 +1,6 @@
 language: node_js
 node_js:
+<<<<<<< HEAD
   - "stable"
 <<<<<<< HEAD
 after_script:
@@ -46,4 +47,14 @@ services:
 before_script:
   - mysql -u root --password="" < server/schema.sql
   - npm start &
+>>>>>>> project/master
+=======
+  - 'stable'
+services:
+  - mysql
+before_script:
+  - cd ./server
+  - npm ci
+after_script:
+  - node .travis/submit.js
 >>>>>>> project/master

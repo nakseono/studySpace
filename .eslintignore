@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 part-one/__test__
 part-two/__test__
 =======
@@ -16,10 +17,17 @@ part-two/__test__
 **/node_modules
 **/spec
 >>>>>>> project/master
+=======
+.eslint*
+**/node_modules
+**/spec
+**/test
+>>>>>>> project/master
 **/bower_components
 **/lib
 **/vendor
 **/*.min.js
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> project/master
@@ -39,4 +47,7 @@ spec/
 >>>>>>> project/master
 =======
 **/node_modules
+>>>>>>> project/master
+=======
+**/public
 >>>>>>> project/master
