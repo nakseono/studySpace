@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> project/master
   "extends": "eslint:recommended",
@@ -39,6 +40,8 @@
 }
 >>>>>>> project/master
 =======
+=======
+>>>>>>> project/master
     "extends": "eslint:recommended",
     "env": {
         "es6": true,
@@ -46,5 +49,9 @@
         "mocha": true,
         "browser": true
     }
+<<<<<<< HEAD
+}
+>>>>>>> project/master
+=======
 }
 >>>>>>> project/master

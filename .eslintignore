@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 part-one/__test__
 part-two/__test__
 =======
@@ -7,11 +8,22 @@ part-two/__test__
 >>>>>>> project/master
 .eslint*
 **/node_modules
+=======
+.eslint*
+**/node_modules
+**/spec
+>>>>>>> project/master
 **/bower_components
 **/lib
 **/vendor
 **/*.min.js
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> project/master
 =======
+>>>>>>> project/master
+=======
+/src/BoardView.js
+/src
+test.mocha.js
 >>>>>>> project/master

@@ -7,7 +7,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -22,9 +25,12 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # editor settings
 .vscode
 
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -70,6 +76,9 @@ Temporary Items
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -87,7 +96,10 @@ yarn-error.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> project/master
 =======
 >>>>>>> project/master
 =======
@@ -105,6 +117,9 @@ lib-cov
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> project/master
+=======
 >>>>>>> project/master
 =======
 >>>>>>> project/master
@@ -141,7 +156,11 @@ bower_components
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+=======
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+>>>>>>> project/master
 =======
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 >>>>>>> project/master
@@ -164,7 +183,11 @@ jspm_packages/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # TypeScript v1 declaration files
+=======
+# Typescript v1 declaration files
+>>>>>>> project/master
 =======
 # Typescript v1 declaration files
 >>>>>>> project/master
@@ -197,6 +220,7 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -245,6 +269,8 @@ node_modules
 >>>>>>> project/master
 =======
 >>>>>>> project/master
+=======
+>>>>>>> project/master
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -266,6 +292,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,4 +331,11 @@ review.json
 =======
 # Students Data
 review.json
+>>>>>>> project/master
+=======
+# prettier
+.prettierrc
+
+# students data
+.review.json
 >>>>>>> project/master
